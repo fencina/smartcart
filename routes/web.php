@@ -15,4 +15,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('operador','OperadorController');
+Route::resource('users','UserController');

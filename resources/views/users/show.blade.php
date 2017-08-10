@@ -13,19 +13,19 @@
         <div class="form-group">
             <label for="inputEmail" class="col-sm-2 control-label">Email</label>
             <div class="col-sm-10">
-                <input type="email" class="form-control" id="inputEmail" placeholder="Email" value="{{ $operador->email }}" disabled>
+                <input type="email" class="form-control" id="inputEmail" placeholder="Email" value="{{ $user->email }}" disabled>
             </div>
         </div>
         <div class="form-group">
             <label for="inputName" class="col-sm-2 control-label">Nombre</label>
             <div class="col-sm-10">
-                <input type="name" class="form-control" id="inputName" placeholder="Nombre" value="{{ $operador->name }}">
+                <input type="name" class="form-control" id="inputName" placeholder="Nombre" value="{{ $user->name }}">
             </div>
         </div>
         <div class="form-group">
             <label for="inputLastName" class="col-sm-2 control-label">Apellido</label>
             <div class="col-sm-10">
-                <input type="last_name" class="form-control" id="inputLastName" placeholder="Apellido" value="{{ $operador->last_name }}">
+                <input type="last_name" class="form-control" id="inputLastName" placeholder="Apellido" value="{{ $user->last_name }}">
             </div>
         </div>
         <div class="form-group">

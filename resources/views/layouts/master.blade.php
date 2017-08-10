@@ -39,7 +39,7 @@
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav">
                             <li>
-                                <a href="{{ route('operador.index') }}">Operadores</a>
+                                <a href="{{ route('users.index') }}">Operadores</a>
                             </li>
                             <li>
                                 <a href="{!! url('/hello_world') !!}">Roles</a>

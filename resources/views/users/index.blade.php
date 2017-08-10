@@ -19,13 +19,13 @@
         </tr>
         </thead>
         <tbody>
-            @foreach ($operadores as $operador)
+            @foreach ($users as $user)
                 <tr>
-                    <td>{{ $operador->name }}</td>
-                    <td>{{ $operador->last_name }}</td>
-                    <td>{{ $operador->email }}</td>
+                    <td>{{ $user->name }}</td>
+                    <td>{{ $user->last_name }}</td>
+                    <td>{{ $user->email }}</td>
                     <td>
-                        <a href="{{ route('operador.show', $operador->id) }}">
+                        <a href="{{ route('users.update', $user->id) }}">
                             <i class="fa fa-user" aria-hidden="true" title="modificar"></i>
                         </a>
                         <a href="https://www.google.com.ar">
@@ -37,6 +37,6 @@
         </tbody>
     </table>
 
-    <a class="btn btn-primary" href="{{ route('operador.create') }}" role="button">Crear nuevo usuario</a>
+    <a class="btn btn-primary" href="{{ route('users.create') }}" role="button">Crear nuevo usuario</a>
 
 @endsection
