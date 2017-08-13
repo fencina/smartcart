@@ -23,12 +23,14 @@ Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm
 Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 
 
+// Home
+Route::get('/', 'HomeController@home')->name('home');
+
 // Panel Routes
 Route::middleware(['auth'])->group( function () {
 
-    Route::resource('users','UserController');
-
-    Route::get('/', 'UserController@index');
-    Route::get('/panel', 'UserController@index');
+    Route::middleware(['role:' . \App\Role::ADMIN_USERS])->group( function () {
+        Route::resource('users','UserController');
+    });
 
 });
