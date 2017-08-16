@@ -42,9 +42,6 @@
                                 <a href="{{ route('users.index') }}">Operadores</a>
                             </li>
                             <li>
-                                <a href="{!! url('/hello_world') !!}">Roles</a>
-                            </li>
-                            <li>
                                 <a href="#">Notificaciones</a>
                             </li>
                         </ul>

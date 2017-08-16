@@ -30,4 +30,33 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function role()
+    {
+        return $this->belongsTo(Role::class);
+    }
+
+    /**
+     * Check if user has a specified role
+     *
+     * @param $role
+     * @return bool
+     */
+    public function hasRole($role)
+    {
+        return $role == $this->role->id;
+    }
+
+    /**
+     * Check if the user is a SuperAdmin
+     *
+     * @return bool
+     */
+    public function isSuperAdmin()
+    {
+        return $this->role->id == Role::SUPER_ADMIN;
+    }
 }
