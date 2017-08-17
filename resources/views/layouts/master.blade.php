@@ -56,6 +56,14 @@
             </div>
         @endif
 
+        @if (session()->has('success'))
+            <div class = "alert alert-success">
+                <ul>
+                    <li>{{ session()->get('success') }}</li>
+                </ul>
+            </div>
+        @endif
+
         <div class = "container">
             @yield('content')
         </div>
