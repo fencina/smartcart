@@ -1,40 +1,55 @@
 <?php
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Http\Requests;
-use App\Http\Controllers\Controller;
+use App\Role;
 use App\User;
+use App\Http\Requests\UserFormRequest;
 
 class UserController extends Controller {
 
     public function index(){
-        $users = User::all();
-        return view('users.index',["users"=>$users]);
+
+        $users = User::paginate(10);
+
+        return view('users.index', compact('users'));
     }
 
     public function create(){
-        echo 'create';
+        $roles = Role::pluck('name', 'id');
+
+        return view('users.create', compact('roles'));
     }
 
-    public function store(Request $request){
-        echo 'store';
+    public function store(UserFormRequest $request){
+        $user = User::create($request->all());
+        $user->password = bcrypt($request->input('password'));
+
+        $user->save();
+
+        return redirect('users')->withSuccess('Operador creado exitosamente');
     }
 
-    public function show($id){
-        $user = User::findOrFail($id);
-        return view('users.show', ["user" => $user]);
+    public function edit(User $user){
+        $roles = Role::pluck('name', 'id');
+
+        return view('users.edit', compact('user', 'roles'));
     }
 
-    public function edit($id){
-        echo 'edit';
+    public function update(UserFormRequest $request, User $user){
+
+        $user->update($request->all());
+
+        return redirect('users')->withSuccess('Operador modificado exitosamente');
     }
 
-    public function update(Request $request, $id){
-        echo 'update';
+    public function delete(User $user)
+    {
+        return view('users.delete', compact('user'));
     }
 
-    public function destroy($id){
-        echo 'destroy';
+    public function destroy(User $user){
+        $user->delete();
+
+        return redirect('users')->withSuccess('Operador dado de baja exitosamente');
     }
 }
