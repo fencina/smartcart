@@ -34,8 +34,15 @@ Route::middleware(['auth'])->group( function () {
         Route::get('users/{user}/delete', 'UserController@delete')->name('users.delete');
     });
 
+
     Route::middleware(['role:' . \App\Role::ADMIN_USERS]);
     Route::resource('compras', 'CompraController');
+
+    Route::middleware(['role:' . \App\Role::ADMIN_PUSH])->group( function () {
+        Route::get('notifications', 'NotificationController@index')->name('notifications.index');
+        Route::get('notifications/create', 'NotificationController@create')->name('notifications.create');
+        Route::post('notifications', 'NotificationController@store')->name('notifications.store');
+    });
 
 });
 
