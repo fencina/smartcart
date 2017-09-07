@@ -36,7 +36,7 @@
                                 <a href="{{ route('users.index') }}">Operadores</a>
                             </li>
                             <li>
-                                <a href="#">Notificaciones</a>
+                                <a href="{{ route('notifications.index') }}">Notificaciones</a>
                             </li>
                         </ul>
                     </div>
