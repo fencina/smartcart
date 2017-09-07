@@ -38,6 +38,9 @@
                             <li>
                                 <a href="#">Notificaciones</a>
                             </li>
+                            <li>
+                                <a href="{{ route('compras.index') }}">Compras</a>
+                            </li>
                         </ul>
                     </div>
                     <!-- /.navbar-collapse -->

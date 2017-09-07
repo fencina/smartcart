@@ -34,4 +34,9 @@ Route::middleware(['auth'])->group( function () {
         Route::get('users/{user}/delete', 'UserController@delete')->name('users.delete');
     });
 
+    Route::middleware(['role:' . \App\Role::ADMIN_USERS]);
+    Route::resource('compras', 'CompraController');
+
 });
+
+Route::resource('compras', 'CompraController');
