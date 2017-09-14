@@ -5,9 +5,12 @@ namespace App\Exceptions;
 use Exception;
 use Illuminate\Auth\AuthenticationException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use App\Traits\ApiResponseExceptionHandler;
 
 class Handler extends ExceptionHandler
 {
+    use ApiResponseExceptionHandler;
+
     /**
      * A list of the exception types that should not be reported.
      *
@@ -44,6 +47,17 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $exception)
     {
+        if ($request->expectsJson()) {
+
+            if (method_exists($this, 'buildApiResponseFor'.class_basename($exception))) {
+                list($responseData, $statusCode) = $this->{'buildApiResponseFor'.class_basename($exception)}($exception);
+            } else {
+                list($responseData, $statusCode) = $this->buildApiResponseForDefaultException($exception);
+            }
+
+            return response()->json($responseData, $statusCode);
+        }
+
         return parent::render($request, $exception);
     }
 
