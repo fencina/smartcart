@@ -4,9 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\NotificationFormRequest;
 use App\Notification;
-use App\User;
-use GuzzleHttp\Client;
-use Illuminate\Http\Request;
+use GuzzleHttp\Client as GuzzleClient;
+use App\Client;
 
 class NotificationController extends Controller
 {
@@ -24,7 +23,7 @@ class NotificationController extends Controller
 
     public function store(NotificationFormRequest $request)
     {
-        $client = new Client();
+        $guzzleClient = new GuzzleClient();
 
         $headers = [
             'Authorization' => 'Bearer ' . env('IONIC_APP_TOKEN')
@@ -39,7 +38,7 @@ class NotificationController extends Controller
         }
 
         try {
-            $client->request('POST', url('https://api.ionic.io/push/notifications'), [
+            $guzzleClient->request('POST', url('https://api.ionic.io/push/notifications'), [
                 'headers' => $headers,
                 'json' => [
                     "send_to_all" => true,
