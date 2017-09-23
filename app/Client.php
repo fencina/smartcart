@@ -27,4 +27,15 @@ class Client extends Authenticatable
     protected $hidden = [
         'password'
     ];
+
+    /**
+     * Encrypt user's password
+     *
+     * @param  string  $value
+     * @return void
+     */
+    public function setPasswordAttribute($value)
+    {
+        $this->attributes['password'] = bcrypt($value);
+    }
 }
