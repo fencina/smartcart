@@ -35,4 +35,16 @@ return [
         'secret' => env('STRIPE_SECRET'),
     ],
 
+    'facebook' => [
+        'client_id' => env('FACEBOOK_APP_ID', 'your-facebook-app-id'),
+        'client_secret' => env('FACEBOOK_APP_SECRET', 'your-facebook-app-secret'),
+        'redirect' => env('LOGIN_REDIRECT_URL', 'http://your-callback-url'),
+    ],
+
+    'google' => [
+        'client_id' => env('GOOGLE_APP_ID', 'your-google-app-id'),
+        'client_secret' => env('GOOGLE_APP_SECRET', 'your-google-app-secret'),
+        'redirect' => env('LOGIN_REDIRECT_URL', 'http://your-callback-url'),
+    ],
+
 ];

@@ -179,6 +179,7 @@ return [
         \Collective\Html\HtmlServiceProvider::class,
         SimpleSoftwareIO\QrCode\QrCodeServiceProvider::class,
         \Laravel\Passport\PassportServiceProvider::class,
+        \Laravel\Socialite\SocialiteServiceProvider::class,
 
 
     ],
@@ -231,7 +232,8 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Form' => \Collective\Html\FormFacade::class,
         'Html' => \Collective\Html\HtmlFacade::class,
-        'QrCode' => SimpleSoftwareIO\QrCode\Facades\QrCode::class
+        'QrCode' => SimpleSoftwareIO\QrCode\Facades\QrCode::class,
+        'Socialite' => \Laravel\Socialite\Facades\Socialite::class,
 
     ],
 
