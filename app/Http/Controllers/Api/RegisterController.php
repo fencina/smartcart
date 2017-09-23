@@ -12,7 +12,7 @@ class RegisterController extends Controller
     public function register(ClientRegisterRequest $request)
     {
         $client = Client::create($request->all());
-        $client->password = bcrypt($request->input('password'));
+        $client->password = $request->input('password');
 
         return response()->json($client->toArray());
     }
