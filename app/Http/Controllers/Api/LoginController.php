@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Client;
 use App\Http\Requests\ClientLoginRequest;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Laravel\Socialite\Facades\Socialite;
 
 class LoginController extends Controller
 {
@@ -27,4 +29,38 @@ class LoginController extends Controller
 
         return response()->json($response, 200);
     }
+
+    public function facebookLogin(Request $request)
+    {
+        return $this->resolveSocialLogin($request, 'facebook');
+    }
+
+    public function googleLogin(Request $request)
+    {
+        return $this->resolveSocialLogin($request, 'google');
+    }
+
+    /**
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
+     */
+    protected function resolveSocialLogin(Request $request, $driver)
+    {
+        $socialClient = Socialite::driver($driver)->userFromToken($request->input('token'));
+
+        list($name, $lastName) = explode(' ', $socialClient->name);
+
+        if (!Client::isRegistered($socialClient->email)) {
+            $smartcartClient = Client::create([
+                'name' => $name,
+                'last_name' => $lastName,
+                'email' => $socialClient->email,
+            ]);
+        } else {
+            $smartcartClient = Client::where('email', $socialClient->email)->first();
+        }
+
+        return response()->json($smartcartClient, 200);
+    }
+
 }
