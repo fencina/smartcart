@@ -38,4 +38,15 @@ class Client extends Authenticatable
     {
         $this->attributes['password'] = bcrypt($value);
     }
+
+    /**
+     * Check if a client is already registered
+     *
+     * @param $email
+     * @return bool
+     */
+    public static function isRegistered($email)
+    {
+        return static::where('email', $email)->exists();
+    }
 }
