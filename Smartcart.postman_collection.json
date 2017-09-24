@@ -1,0 +1,729 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Smartcart",
+		"_postman_id": "ee68f30d-c89b-624c-363c-37c8469e61bd",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"url": "http://{{host}}/api/register",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Nombre\",\n\t\"last_name\": \"Apellido\",\n\t\"email\": \"email@email.com\",\n\t\"password\": \"pass1234\"\n}"
+				},
+				"description": "Registra un cliente en la app mobile"
+			},
+			"response": [
+				{
+					"id": "0d6e9092-5bf7-48b6-b64e-daf41eef0cfb",
+					"name": "Register client successfully",
+					"originalRequest": {
+						"url": "http://{{host}}/api/register",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": "",
+								"warning": ""
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Nombre\",\n\t\"last_name\": \"Apellido\",\n\t\"email\": \"email@email.com\",\n\t\"password\": \"pass1234\"\n}"
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"name": "cache-control",
+							"key": "cache-control",
+							"value": "no-cache, private",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"name": "connection",
+							"key": "connection",
+							"value": "keep-alive",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "content-encoding",
+							"key": "content-encoding",
+							"value": "gzip",
+							"description": "The type of encoding used on the data."
+						},
+						{
+							"name": "content-type",
+							"key": "content-type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "date",
+							"key": "date",
+							"value": "Thu, 14 Sep 2017 23:23:04 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "server",
+							"key": "server",
+							"value": "nginx/1.10.3 (Ubuntu)",
+							"description": "A name for the server"
+						},
+						{
+							"name": "transfer-encoding",
+							"key": "transfer-encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"name": "vary",
+							"key": "vary",
+							"value": "Accept-Encoding",
+							"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+						},
+						{
+							"name": "x-ratelimit-limit",
+							"key": "x-ratelimit-limit",
+							"value": "60",
+							"description": "Custom header"
+						},
+						{
+							"name": "x-ratelimit-remaining",
+							"key": "x-ratelimit-remaining",
+							"value": "59",
+							"description": "Custom header"
+						}
+					],
+					"cookie": [],
+					"responseTime": 88,
+					"body": "{\"name\":\"Nombre\",\"last_name\":\"Apellido\",\"email\":\"email@email.com\",\"updated_at\":\"2017-09-14 23:23:04\",\"created_at\":\"2017-09-14 23:23:04\",\"id\":4}"
+				},
+				{
+					"id": "2eb95224-ef5f-4e50-a91d-8729e3121b95",
+					"name": "Register client with missing params",
+					"originalRequest": {
+						"url": "http://{{host}}/api/register",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": "",
+								"warning": ""
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n}"
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"name": "cache-control",
+							"key": "cache-control",
+							"value": "no-cache, private",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"name": "connection",
+							"key": "connection",
+							"value": "keep-alive",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "content-type",
+							"key": "content-type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "date",
+							"key": "date",
+							"value": "Thu, 14 Sep 2017 23:24:33 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "server",
+							"key": "server",
+							"value": "nginx/1.10.3 (Ubuntu)",
+							"description": "A name for the server"
+						},
+						{
+							"name": "transfer-encoding",
+							"key": "transfer-encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"name": "x-ratelimit-limit",
+							"key": "x-ratelimit-limit",
+							"value": "60",
+							"description": "Custom header"
+						},
+						{
+							"name": "x-ratelimit-remaining",
+							"key": "x-ratelimit-remaining",
+							"value": "59",
+							"description": "Custom header"
+						}
+					],
+					"cookie": [],
+					"responseTime": 26,
+					"body": "{\"error\":\"ValidationException\",\"data\":{\"name\":[\"The name field is required.\"],\"last_name\":[\"The last name field is required.\"],\"email\":[\"The email field is required.\"],\"password\":[\"The password field is required.\"]}}"
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"request": {
+				"url": "http://{{host}}/api/login",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"email@email.com\",\n\t\"password\": \"wrongpass\"\n}"
+				},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "b20cc93f-930c-4aab-83d1-126a94641d8b",
+					"name": "Login client successfully",
+					"originalRequest": {
+						"url": "http://{{host}}/api/login",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": "",
+								"warning": ""
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\": \"email@email.com\",\n\t\"password\": \"pass1234\"\n}"
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"name": "cache-control",
+							"key": "cache-control",
+							"value": "no-cache, private",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"name": "connection",
+							"key": "connection",
+							"value": "keep-alive",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "content-encoding",
+							"key": "content-encoding",
+							"value": "gzip",
+							"description": "The type of encoding used on the data."
+						},
+						{
+							"name": "content-type",
+							"key": "content-type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "date",
+							"key": "date",
+							"value": "Thu, 14 Sep 2017 23:46:58 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "server",
+							"key": "server",
+							"value": "nginx/1.10.3 (Ubuntu)",
+							"description": "A name for the server"
+						},
+						{
+							"name": "transfer-encoding",
+							"key": "transfer-encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"name": "vary",
+							"key": "vary",
+							"value": "Accept-Encoding",
+							"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+						},
+						{
+							"name": "x-ratelimit-limit",
+							"key": "x-ratelimit-limit",
+							"value": "60",
+							"description": "Custom header"
+						},
+						{
+							"name": "x-ratelimit-remaining",
+							"key": "x-ratelimit-remaining",
+							"value": "59",
+							"description": "Custom header"
+						}
+					],
+					"cookie": [],
+					"responseTime": 816,
+					"body": "{\"token_type\":\"Bearer\",\"expires_in\":31536000,\"access_token\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjJkMTc5N2VkZTZhMzY0ZmM1MGQ3MGMzMDU1ZDE4MGFkMzZjYjQ0MTM4MjE0MjRmM2ZhNWE4M2YwMTU2NjBjYzJiYzQ5MTE1MDY4MDcyZTdkIn0.eyJhdWQiOiIyIiwianRpIjoiMmQxNzk3ZWRlNmEzNjRmYzUwZDcwYzMwNTVkMTgwYWQzNmNiNDQxMzgyMTQyNGYzZmE1YTgzZjAxNTY2MGNjMmJjNDkxMTUwNjgwNzJlN2QiLCJpYXQiOjE1MDU0MzI4MTgsIm5iZiI6MTUwNTQzMjgxOCwiZXhwIjoxNTM2OTY4ODE4LCJzdWIiOiI1Iiwic2NvcGVzIjpbXX0.B9kfmUPxO96_71tK2PKnaD4ol_Yoob6kWxWCo3Ea8wb8Syp0uzKmeYSO15Bi2Vt9NCubjF6Ojevv9AKioVsQoyDCJWslSk7Twx9Yt9jYznCYaU9Le24Fe5pe5x4ya3fPP0HfbElXnFCOjX8brm5CkcD74lLJtKGO4SGlRL9nqI_2bR2wkCLMc3rAQOa_C2gPZxfd65ElW_D1VkYVAGPCN4132JWmGNq0x98oRftiYg3kxC_xTOzfKKXbhuTGOsYtedTJw6lj7Nz8tvxdZu_tzhekXInoUSvPuijXHBhhXpfTW6MHRQNSiUutycZ-ABN_IVMF10DrybnFq3cJBZfNHH-Nup0ubocpoOAJ5ZTll3dxgZErhlh0e7vJnodssnvdCxHW-eBXTdBkI6oMC8CGQC3aLF4jIqkKF4cQVredUFUan0YmhZ9y4wZEnfP6PfglTEkLarIWbJYAkIw2xmDcfQSlls5XiuUCDwl64tVkWe-4lMgAgdNxjxiQzlcw2PaQCrYAdVFToWTEu1c7RRp-g4h62i4a7CHFtZ6K-hi1HFVOdBmFfSNQO5ZCaCW1ftQWjc37RF0OY4oiXt-tq8p0cUVk2k0GfpGHnq5S9q2eppAUgXq5nB_2W_r415vJT5PWiuo5gPCMEscDu-gkByXYs6_7byWiFfzwFT4pOd6Iars\",\"refresh_token\":\"def50200575f2299a1510e9d0d06e9d72d8b112f29ffaf821b820e501d3636daa73eafb5066227251258caea84ce54190e3b18b6c4cff39ac98d8b028a21491ae0342edb49ad83e092d34b87aef06ff4c77958f852f2e226d2c5808c86269fbe49cd042cee54787504737328c3de95b54c102752e65fdb2ceceab8cad56ee4dca4e67b595cde05bb170c6a0fb097abfda5417825280b0bdb51b14c63eb77873f08f24a8375903bbc97fa5141e64855df71e97c9cf42b1750121242d49c99243118a5042d99d63eb87250e104a8c5581831ee17583c17ab1244ad8b8e10dd4045093c71e4daa9cdfa033bf1282656af769856d5fb1fbeb5ee2c75ffb42cdfbb7868692d7ea8b6699df01b712652133c1e411b00204e69748ef74adf238b0bfa41319581eaa12f70dff9b73f52d0c1eb2d18ab3e9c54ace481804d0c9b491331d9f1368208dafafe80d960f9e66010be5c6d3a7a688a82295861aedf3abaf78c\"}"
+				},
+				{
+					"id": "cf3ef4fd-bc6f-436b-bff9-7ba8774bacdc",
+					"name": "Login client with missing param",
+					"originalRequest": {
+						"url": "http://{{host}}/api/login",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": "",
+								"warning": ""
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\": \"email@email.com\"\n}"
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"name": "cache-control",
+							"key": "cache-control",
+							"value": "no-cache, private",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"name": "connection",
+							"key": "connection",
+							"value": "keep-alive",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "content-type",
+							"key": "content-type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "date",
+							"key": "date",
+							"value": "Thu, 14 Sep 2017 23:47:55 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "server",
+							"key": "server",
+							"value": "nginx/1.10.3 (Ubuntu)",
+							"description": "A name for the server"
+						},
+						{
+							"name": "transfer-encoding",
+							"key": "transfer-encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"name": "x-ratelimit-limit",
+							"key": "x-ratelimit-limit",
+							"value": "60",
+							"description": "Custom header"
+						},
+						{
+							"name": "x-ratelimit-remaining",
+							"key": "x-ratelimit-remaining",
+							"value": "58",
+							"description": "Custom header"
+						}
+					],
+					"cookie": [],
+					"responseTime": 32,
+					"body": "{\"error\":\"ValidationException\",\"data\":{\"password\":[\"The password field is required.\"]}}"
+				},
+				{
+					"id": "1ad89b41-47a7-42f8-be8f-bb3f8fc0e2b0",
+					"name": "Login client with invalid credentials",
+					"originalRequest": {
+						"url": "http://{{host}}/api/login",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": "",
+								"warning": ""
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\": \"email@email.com\",\n\t\"password\": \"wrongpass\"\n}"
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"name": "cache-control",
+							"key": "cache-control",
+							"value": "no-cache, private",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"name": "connection",
+							"key": "connection",
+							"value": "keep-alive",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "content-type",
+							"key": "content-type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "date",
+							"key": "date",
+							"value": "Thu, 14 Sep 2017 23:48:38 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "server",
+							"key": "server",
+							"value": "nginx/1.10.3 (Ubuntu)",
+							"description": "A name for the server"
+						},
+						{
+							"name": "transfer-encoding",
+							"key": "transfer-encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"name": "x-ratelimit-limit",
+							"key": "x-ratelimit-limit",
+							"value": "60",
+							"description": "Custom header"
+						},
+						{
+							"name": "x-ratelimit-remaining",
+							"key": "x-ratelimit-remaining",
+							"value": "59",
+							"description": "Custom header"
+						}
+					],
+					"cookie": [],
+					"responseTime": 852,
+					"body": "{\"error\":\"Client error: `POST http:\\/\\/smartcart.dev\\/oauth\\/token` resulted in a `401 Unauthorized` response:\\n{\\\"error\\\":\\\"invalid_credentials\\\",\\\"message\\\":\\\"The user credentials were incorrect.\\\"}\\n\"}"
+				}
+			]
+		},
+		{
+			"name": "Facebook Login",
+			"request": {
+				"url": "http://{{host}}/api/facebookLogin",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "0ba67461-a7de-46de-b0c4-98a58d9300d8",
+					"name": "Facebook Login successfully",
+					"originalRequest": {
+						"url": "http://{{host}}/api/facebookLogin",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": "",
+								"warning": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": "",
+								"warning": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"token\": \"EAACcUYSLwncBAAc7xN9yqTofFRTin2wCSF1IM5HLrGRt65mz3A1J6wBSuOr1lq4HViqMKvxgzCmgD7oHKuyms1BQw8wvwUGOwXPwijNBBb7Xrw1B47AtouGTFQZATDBN6rClptsNFybVuHcb9JkYc4U8k7Frrd8Vt3ZBqWBKxi3VcM76F2YNngR7AyHZC4qTYOlbxbfPwZDZD\"\n}"
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"name": "cache-control",
+							"key": "cache-control",
+							"value": "no-cache, private",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"name": "connection",
+							"key": "connection",
+							"value": "keep-alive",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "content-encoding",
+							"key": "content-encoding",
+							"value": "gzip",
+							"description": "The type of encoding used on the data."
+						},
+						{
+							"name": "content-type",
+							"key": "content-type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "date",
+							"key": "date",
+							"value": "Sun, 24 Sep 2017 22:53:38 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "server",
+							"key": "server",
+							"value": "nginx/1.10.3 (Ubuntu)",
+							"description": "A name for the server"
+						},
+						{
+							"name": "transfer-encoding",
+							"key": "transfer-encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"name": "vary",
+							"key": "vary",
+							"value": "Accept-Encoding",
+							"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+						},
+						{
+							"name": "x-ratelimit-limit",
+							"key": "x-ratelimit-limit",
+							"value": "60",
+							"description": "Custom header"
+						},
+						{
+							"name": "x-ratelimit-remaining",
+							"key": "x-ratelimit-remaining",
+							"value": "58",
+							"description": "Custom header"
+						}
+					],
+					"cookie": [],
+					"responseTime": 710,
+					"body": "{\"id\":7,\"name\":\"Facundo\",\"last_name\":\"Encina\",\"email\":\"facundo_encina@hotmail.com\",\"created_at\":\"2017-09-24 20:22:18\",\"updated_at\":\"2017-09-24 20:22:18\"}"
+				}
+			]
+		},
+		{
+			"name": "Google Login",
+			"request": {
+				"url": "http://{{host}}/api/googleLogin",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"token\": \"ya29.GlvQBG5oCFbNo-Ez0Qjo9ylLCfoRoR7fiex0bV7JU3llDwuPSs1l0wqEhmtGQLk0VQRSEMsLjWIsddxajWVOuO3UCaxHoc-sDJNCUT1ioGvR8LDIV4bWs8nUnnsH\"\n}"
+				},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "bec736fe-94fe-4cc3-8873-a9ac79751a66",
+					"name": "Google Login successfully",
+					"originalRequest": {
+						"url": "http://{{host}}/api/googleLogin",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": "",
+								"warning": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"token\": \"ya29.GlvQBG5oCFbNo-Ez0Qjo9ylLCfoRoR7fiex0bV7JU3llDwuPSs1l0wqEhmtGQLk0VQRSEMsLjWIsddxajWVOuO3UCaxHoc-sDJNCUT1ioGvR8LDIV4bWs8nUnnsH\"\n}"
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"name": "cache-control",
+							"key": "cache-control",
+							"value": "no-cache, private",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"name": "connection",
+							"key": "connection",
+							"value": "keep-alive",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "content-encoding",
+							"key": "content-encoding",
+							"value": "gzip",
+							"description": "The type of encoding used on the data."
+						},
+						{
+							"name": "content-type",
+							"key": "content-type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "date",
+							"key": "date",
+							"value": "Sun, 24 Sep 2017 22:48:17 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "server",
+							"key": "server",
+							"value": "nginx/1.10.3 (Ubuntu)",
+							"description": "A name for the server"
+						},
+						{
+							"name": "transfer-encoding",
+							"key": "transfer-encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"name": "vary",
+							"key": "vary",
+							"value": "Accept-Encoding",
+							"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+						},
+						{
+							"name": "x-ratelimit-limit",
+							"key": "x-ratelimit-limit",
+							"value": "60",
+							"description": "Custom header"
+						},
+						{
+							"name": "x-ratelimit-remaining",
+							"key": "x-ratelimit-remaining",
+							"value": "57",
+							"description": "Custom header"
+						}
+					],
+					"cookie": [],
+					"responseTime": 877,
+					"body": "{\"id\":8,\"name\":\"Facundo\",\"last_name\":\"Encina\",\"email\":\"facundo.encina@gmail.com\",\"created_at\":\"2017-09-24 22:48:07\",\"updated_at\":\"2017-09-24 22:48:07\"}"
+				}
+			]
+		}
+	]
+}
