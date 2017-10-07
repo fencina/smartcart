@@ -8,6 +8,7 @@
         <h3>¿Desea restaurar el operador {{ $user->name . ' ' . $user->last_name }} ?</h3>
 
         {{ Form::open(['route' => ['users.restore', $user->id], 'method' => 'PUT', 'class' => 'form-horizontal']) }}
+            <button type="button" class="btn btn-default" onclick="window.history.back()">Volver</button>
             <button type="submit" class="btn btn-success">Restaurar</button>
         {{ Form::close() }}
     </div>
