@@ -29,6 +29,14 @@ class Client extends Authenticatable
     ];
 
     /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function groups()
+    {
+        return $this->belongsToMany(Group::class)->withPivot('owner');
+    }
+
+    /**
      * Encrypt user's password
      *
      * @param  string  $value
