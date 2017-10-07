@@ -32,6 +32,8 @@ Route::middleware(['auth'])->group( function () {
     Route::middleware(['role:' . \App\Role::ADMIN_USERS])->group( function () {
         Route::resource('users','UserController', ['except' => ['show']]);
         Route::get('users/{user}/delete', 'UserController@delete')->name('users.delete');
+        Route::get('users/{user}/restore', 'UserController@restoreView')->name('users.restoreView');
+        Route::put('users/{user}/restore', 'UserController@restore')->name('users.restore');
     });
 
 

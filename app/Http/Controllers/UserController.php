@@ -9,7 +9,7 @@ class UserController extends Controller {
 
     public function index(){
 
-        $users = User::paginate(10);
+        $users = User::withTrashed()->paginate(10);
 
         return view('users.index', compact('users'));
     }
@@ -51,5 +51,17 @@ class UserController extends Controller {
         $user->delete();
 
         return redirect('users')->withSuccess('Operador dado de baja exitosamente');
+    }
+
+    public function restoreView(User $user)
+    {
+        return view('users.restore', compact('user'));
+    }
+
+    public function restore(User $user)
+    {
+        $user->restore();
+
+        return redirect('users')->withSuccess('Operador restaurado exitosamente');
     }
 }

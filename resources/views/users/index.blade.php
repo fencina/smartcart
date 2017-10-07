@@ -21,7 +21,7 @@
         </thead>
         <tbody>
             @foreach ($users as $user)
-                <tr>
+                <tr style="{{ !$user->deleted_at ?: "color:red;"  }}" >
                     <td>{{ $user->name }}</td>
                     <td>{{ $user->last_name }}</td>
                     <td>{{ $user->email }}</td>
@@ -30,9 +30,14 @@
                         <a href="{{ route('users.edit', $user->id) }}">
                             <i class="fa fa-user" aria-hidden="true" title="Modificar"></i>
                         </a>
-                        @if(!$user->isSuperAdmin() AND Auth::user()->id != $user->id)
+                        @if(!$user->isSuperAdmin() AND Auth::user()->id != $user->id AND !$user->deleted_at)
                             <a href="{{ route('users.delete', $user->id) }}">
                                 <i class="fa fa-minus-square" aria-hidden="true" title="Dar de baja"></i>
+                            </a>
+                        @endif
+                        @if($user->deleted_at)
+                            <a href="{{ route('users.restoreView', $user->id) }}">
+                                <i class="fa fa-refresh" aria-hidden="true" title="Restaurar"></i>
                             </a>
                         @endif
                     </td>
