@@ -18,6 +18,6 @@ Route::post('/login', 'LoginController@login');
 Route::post('/facebookLogin', 'LoginController@facebookLogin');
 Route::post('/googleLogin', 'LoginController@googleLogin');
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+Route::middleware(['auth:api'])->group( function () {
+    Route::resource('groups', 'GroupController', ['except' => ['create', 'edit', 'delete']]);
 });
