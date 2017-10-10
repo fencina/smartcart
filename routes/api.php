@@ -20,4 +20,6 @@ Route::post('/googleLogin', 'LoginController@googleLogin');
 
 Route::middleware(['auth:api'])->group( function () {
     Route::resource('groups', 'GroupController', ['except' => ['create', 'edit', 'delete']]);
+
+    Route::get('search/{model}', ['as' => 'search.model', 'uses' => 'SearcherController@search']);
 });
