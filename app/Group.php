@@ -30,4 +30,12 @@ class Group extends Model
     {
         return $this->belongsToMany(Client::class)->withPivot('owner');
     }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function lists()
+    {
+        return $this->hasMany(PurchaseList::class);
+    }
 }
