@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Client;
 use App\Http\Requests\ClientLoginRequest;
+use App\OauthClient;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Laravel\Socialite\Facades\Socialite;
@@ -13,13 +14,14 @@ class LoginController extends Controller
     public function login(ClientLoginRequest $request)
     {
 
-        $client = new \GuzzleHttp\Client();
+        $guzzleClient = new \GuzzleHttp\Client();
+        $oauthClient = OauthClient::getPasswordClientSecret();
 
-        $response = $client->request('POST', url('/oauth/token'), [
+        $response = $guzzleClient->request('POST', url('/oauth/token'), [
             'json' => [
                 "grant_type" => "password",
-                "client_id" => 2,
-                "client_secret" => "XOry4JuJewq9pOaA7us4DQsoBNxgiDDyzxjlRgRO",
+                "client_id" => $oauthClient->id,
+                "client_secret" => $oauthClient->secret,
                 "username" => $request->input('email'),
                 "password" => $request->input('password')
             ]
