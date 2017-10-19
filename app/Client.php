@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Events\ClientCreated;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Laravel\Passport\HasApiTokens;
 
@@ -26,6 +27,10 @@ class Client extends Authenticatable
      */
     protected $hidden = [
         'password'
+    ];
+
+    protected $events = [
+        'created' => ClientCreated::class,
     ];
 
     /**
@@ -56,5 +61,15 @@ class Client extends Authenticatable
     public static function isRegistered($email)
     {
         return static::where('email', $email)->exists();
+    }
+
+    /**
+     * Get client's personal group
+     *
+     * @return Group
+     */
+    public function getPersonalGroup()
+    {
+        return $this->groups()->where('personal', 1)->first();
     }
 }
