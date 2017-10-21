@@ -1,27 +1,39 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
-use App\Purchases;
+use App\Product;
+use App\Purchase;
+use App\Status;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class PurchasesController extends Controller
 {
 
     /**
-     * Store a newly created resource in storage.
+     * Store a newly created resource in storage.http://{{host}}/api/search/groups?personal=0
      *
      * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
-        $purchases = new Purchases();
-        $purchases->save();
+        $purchase = new Purchase();
+
+        $pendingStatus = Status::pending();
+        $purchase->status()->associate($pendingStatus);
+
+        $products = Product::whereIn('id', $request->input('products'))->get();
+        $purchase->amounts = $products->sum->price;
+
+        $purchase->save();
 
         if ($request->has('product')) {
-            $purchases->products()->attach($request->input('product'));
+            $purchase->products()->attach($request->input('product'));
         }
+
+        return response()->json($purchase->load('products'));
     }
 
     /**
@@ -32,10 +44,10 @@ class PurchasesController extends Controller
      */
     public function show($id)
     {
-        return Purchases::find($id);
+        return Purchase::find($id);
     }
 
-    public function update(Request $request, Purchases $purchase)
+    public function update(Request $request, Purchase $purchase)
     {
         $purchase->update($request->all());
 
