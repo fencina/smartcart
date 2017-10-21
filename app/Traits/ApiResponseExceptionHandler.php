@@ -7,7 +7,8 @@ trait ApiResponseExceptionHandler
     public function buildApiResponseForDefaultException($exception)
     {
         $response = [
-            'error' => class_basename($exception)
+            'error' => class_basename($exception),
+            'message' => $exception->getMessage()
         ];
 
         $statusCode = method_exists($exception, 'getStatusCode') ? $exception->getStatusCode() : 500;
