@@ -62,7 +62,7 @@ class LoginController extends Controller
             $smartcartClient = Client::where('email', $socialClient->email)->first();
         }
 
-        return response()->json($smartcartClient, 200);
+        return response()->json($smartcartClient->createToken('socialLoginToken'), 200);
     }
 
 }

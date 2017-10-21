@@ -32,7 +32,7 @@
 			},
 			"response": [
 				{
-					"id": "5b9aca6d-6030-474a-9aec-cdef704505b6",
+					"id": "8bf1c000-ef5b-4621-a4fa-3208526b5b98",
 					"name": "Register client successfully",
 					"originalRequest": {
 						"url": "http://{{host}}/api/register",
@@ -127,7 +127,7 @@
 					"body": "{\"name\":\"Nombre\",\"last_name\":\"Apellido\",\"email\":\"email@email.com\",\"updated_at\":\"2017-09-14 23:23:04\",\"created_at\":\"2017-09-14 23:23:04\",\"id\":4}"
 				},
 				{
-					"id": "7848c803-6346-41af-b450-73724c3adc99",
+					"id": "fe9f08df-35c8-467a-a171-4aa7b34d2946",
 					"name": "Register client with missing params",
 					"originalRequest": {
 						"url": "http://{{host}}/api/register",
@@ -231,7 +231,7 @@
 			},
 			"response": [
 				{
-					"id": "6f9dea1d-b1fb-46b7-888f-4dbb3a034864",
+					"id": "6e489eb4-1b96-4625-815d-c3ca0cdec10f",
 					"name": "Login client successfully",
 					"originalRequest": {
 						"url": "http://{{host}}/api/login",
@@ -326,7 +326,7 @@
 					"body": "{\"token_type\":\"Bearer\",\"expires_in\":31536000,\"access_token\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjJkMTc5N2VkZTZhMzY0ZmM1MGQ3MGMzMDU1ZDE4MGFkMzZjYjQ0MTM4MjE0MjRmM2ZhNWE4M2YwMTU2NjBjYzJiYzQ5MTE1MDY4MDcyZTdkIn0.eyJhdWQiOiIyIiwianRpIjoiMmQxNzk3ZWRlNmEzNjRmYzUwZDcwYzMwNTVkMTgwYWQzNmNiNDQxMzgyMTQyNGYzZmE1YTgzZjAxNTY2MGNjMmJjNDkxMTUwNjgwNzJlN2QiLCJpYXQiOjE1MDU0MzI4MTgsIm5iZiI6MTUwNTQzMjgxOCwiZXhwIjoxNTM2OTY4ODE4LCJzdWIiOiI1Iiwic2NvcGVzIjpbXX0.B9kfmUPxO96_71tK2PKnaD4ol_Yoob6kWxWCo3Ea8wb8Syp0uzKmeYSO15Bi2Vt9NCubjF6Ojevv9AKioVsQoyDCJWslSk7Twx9Yt9jYznCYaU9Le24Fe5pe5x4ya3fPP0HfbElXnFCOjX8brm5CkcD74lLJtKGO4SGlRL9nqI_2bR2wkCLMc3rAQOa_C2gPZxfd65ElW_D1VkYVAGPCN4132JWmGNq0x98oRftiYg3kxC_xTOzfKKXbhuTGOsYtedTJw6lj7Nz8tvxdZu_tzhekXInoUSvPuijXHBhhXpfTW6MHRQNSiUutycZ-ABN_IVMF10DrybnFq3cJBZfNHH-Nup0ubocpoOAJ5ZTll3dxgZErhlh0e7vJnodssnvdCxHW-eBXTdBkI6oMC8CGQC3aLF4jIqkKF4cQVredUFUan0YmhZ9y4wZEnfP6PfglTEkLarIWbJYAkIw2xmDcfQSlls5XiuUCDwl64tVkWe-4lMgAgdNxjxiQzlcw2PaQCrYAdVFToWTEu1c7RRp-g4h62i4a7CHFtZ6K-hi1HFVOdBmFfSNQO5ZCaCW1ftQWjc37RF0OY4oiXt-tq8p0cUVk2k0GfpGHnq5S9q2eppAUgXq5nB_2W_r415vJT5PWiuo5gPCMEscDu-gkByXYs6_7byWiFfzwFT4pOd6Iars\",\"refresh_token\":\"def50200575f2299a1510e9d0d06e9d72d8b112f29ffaf821b820e501d3636daa73eafb5066227251258caea84ce54190e3b18b6c4cff39ac98d8b028a21491ae0342edb49ad83e092d34b87aef06ff4c77958f852f2e226d2c5808c86269fbe49cd042cee54787504737328c3de95b54c102752e65fdb2ceceab8cad56ee4dca4e67b595cde05bb170c6a0fb097abfda5417825280b0bdb51b14c63eb77873f08f24a8375903bbc97fa5141e64855df71e97c9cf42b1750121242d49c99243118a5042d99d63eb87250e104a8c5581831ee17583c17ab1244ad8b8e10dd4045093c71e4daa9cdfa033bf1282656af769856d5fb1fbeb5ee2c75ffb42cdfbb7868692d7ea8b6699df01b712652133c1e411b00204e69748ef74adf238b0bfa41319581eaa12f70dff9b73f52d0c1eb2d18ab3e9c54ace481804d0c9b491331d9f1368208dafafe80d960f9e66010be5c6d3a7a688a82295861aedf3abaf78c\"}"
 				},
 				{
-					"id": "498cbea8-17db-4d12-9817-e0dfb4ad3793",
+					"id": "1d61d86e-43f7-47b2-b80d-97941a19b3d1",
 					"name": "Login client with missing param",
 					"originalRequest": {
 						"url": "http://{{host}}/api/login",
@@ -409,7 +409,7 @@
 					"body": "{\"error\":\"ValidationException\",\"data\":{\"password\":[\"The password field is required.\"]}}"
 				},
 				{
-					"id": "05c58930-ccb8-40b8-b817-3093e3b8ce5f",
+					"id": "538eb3dc-f474-4a16-9a50-daf31d128b33",
 					"name": "Login client with invalid credentials",
 					"originalRequest": {
 						"url": "http://{{host}}/api/login",
@@ -513,8 +513,8 @@
 			},
 			"response": [
 				{
-					"id": "82027b84-7d88-4926-a247-f3988805400a",
-					"name": "Facebook Login successfully",
+					"id": "7e67d911-98f4-40b4-bc9b-2777616b9858",
+					"name": "Facebook Login Successfully",
 					"originalRequest": {
 						"url": "http://{{host}}/api/facebookLogin",
 						"method": "POST",
@@ -522,20 +522,18 @@
 							{
 								"key": "Accept",
 								"value": "application/json",
-								"description": "",
-								"warning": ""
+								"description": ""
 							},
 							{
 								"key": "Content-Type",
+								"name": "Content-Type",
 								"value": "application/json",
-								"description": "",
-								"warning": "",
-								"disabled": true
+								"description": ""
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"token\": \"EAACcUYSLwncBAAc7xN9yqTofFRTin2wCSF1IM5HLrGRt65mz3A1J6wBSuOr1lq4HViqMKvxgzCmgD7oHKuyms1BQw8wvwUGOwXPwijNBBb7Xrw1B47AtouGTFQZATDBN6rClptsNFybVuHcb9JkYc4U8k7Frrd8Vt3ZBqWBKxi3VcM76F2YNngR7AyHZC4qTYOlbxbfPwZDZD\"\n}"
+							"raw": "{\n\t\"token\": \"EAACcUYSLwncBAJBZACtok1JZB1UcybKuJYbMexdiy1rTyAFTSIOO8Xpsoa332tgZBXoZBGTNPL9JdeyRSSqL5pqBDgc5O35iMeybJIpGkeIwFPNlT6809tXTJueEEQBcWys1JXZAPsJynqNA6L96tibr0GZC3TBQSMalFgrZBSaclaUoAiXeJVAvFbw7xjUHqoZD\"\n}"
 						}
 					},
 					"status": "OK",
@@ -570,7 +568,7 @@
 						{
 							"name": "date",
 							"key": "date",
-							"value": "Sun, 24 Sep 2017 22:53:38 GMT",
+							"value": "Mon, 16 Oct 2017 01:14:34 GMT",
 							"description": "The date and time that the message was sent"
 						},
 						{
@@ -605,8 +603,8 @@
 						}
 					],
 					"cookie": [],
-					"responseTime": 710,
-					"body": "{\"id\":7,\"name\":\"Facundo\",\"last_name\":\"Encina\",\"email\":\"facundo_encina@hotmail.com\",\"created_at\":\"2017-09-24 20:22:18\",\"updated_at\":\"2017-09-24 20:22:18\"}"
+					"responseTime": 788,
+					"body": "{\"accessToken\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImVjZWFlN2RhN2NjNDVkMDA3ODE0ZTY1MzFiNjVmNzc1MmYwODgyMzVjMDVmNjAxNTJkNmVkYjZkZWFlNGY2YWNhYWNlMGM2MDg0NTllZDYwIn0.eyJhdWQiOiIxIiwianRpIjoiZWNlYWU3ZGE3Y2M0NWQwMDc4MTRlNjUzMWI2NWY3NzUyZjA4ODIzNWMwNWY2MDE1MmQ2ZWRiNmRlYWU0ZjZhY2FhY2UwYzYwODQ1OWVkNjAiLCJpYXQiOjE1MDgxMTY0NzQsIm5iZiI6MTUwODExNjQ3NCwiZXhwIjoxNTM5NjUyNDc0LCJzdWIiOiI3Iiwic2NvcGVzIjpbXX0.VmWLJkREHdZaGi_YXgG2g6rCYxQTePm9ejYWLk1cSjq8D7BCqMrphZSn40yWYC3Ryu15UDHAnY_7aJxNsbTPI2YrE_gsnGSyV4hoIdw_NK83TTK2aFQMNioKKvyA1yank8RJjuf5v_trofyJ9-2Va0osgRrZ03cYkTlFr20L7GjpSz9NCKkziBY6cZMIxMuv6UzVv1LRuZ6LNFblDH5eLw7VZB3qbL8VkCxaFEjt99Kx0_CXF8uqYnn3_cR0J8q0_WTnL31RuKLSU35FMrDQJc57aWN2LQp0yY29pg5CP_ABsvsZjmd6sVftc3uMJyTcmkn_Byc3kVUCyKwxz4AD4GiYwY100FWkkRLv-MBfczhmAnXTngU5ia0SGfOWyXJrMIPAyVDpvNl03P8gShBaya6v09OwlB6NDZy0XINugKcDP5Ew4ydcwDeT-A5FDcDKZcYbYNabOFiOlYwtJJa8dBFPca1YU6Z460A76ViCciEuJVbLNWlc8ipGrZ7IVOPoJPvuxN4h6rxHHbeKy8UjK0Lg2FdyJtwHjtXeLERDtfGU7ILMLZ3EosaJpERBn1SEM5Pu44bOz5ON4pZNZkso08ZAWhplwR_t2hDHZjMXa0FWY_9Yf32Z8YeeG563cXMzjOW7i6NDuozJIQ1MTGpOIOPY_iJuJjceAAt3y0RB8bo\",\"token\":{\"id\":\"eceae7da7cc45d007814e6531b65f7752f088235c05f60152d6edb6deae4f6acaace0c608459ed60\",\"user_id\":7,\"client_id\":1,\"name\":\"socialLoginToken\",\"scopes\":[],\"revoked\":false,\"created_at\":\"2017-10-16 01:14:34\",\"updated_at\":\"2017-10-16 01:14:34\",\"expires_at\":\"2018-10-16 01:14:34\"}}"
 				}
 			]
 		},
@@ -635,8 +633,8 @@
 			},
 			"response": [
 				{
-					"id": "7d1b8994-fb4e-42ca-9878-aa52c26639a6",
-					"name": "Google Login successfully",
+					"id": "2c7db84a-dff8-42fb-912a-abf81b5e67b8",
+					"name": "Google Login Successfully",
 					"originalRequest": {
 						"url": "http://{{host}}/api/googleLogin",
 						"method": "POST",
@@ -644,13 +642,17 @@
 							{
 								"key": "Accept",
 								"value": "application/json",
-								"description": "",
-								"warning": ""
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"token\": \"ya29.GlvQBG5oCFbNo-Ez0Qjo9ylLCfoRoR7fiex0bV7JU3llDwuPSs1l0wqEhmtGQLk0VQRSEMsLjWIsddxajWVOuO3UCaxHoc-sDJNCUT1ioGvR8LDIV4bWs8nUnnsH\"\n}"
+							"raw": "{\n\t\"token\": \"ya29.GlvmBMKospv23uPfvJF9y15QbAImvJ5Ll5da0snZp1Bp-jEb9AIIUj1xW7RI8dyrIPlHaKphPpA69GCwIc09VXZdh_pPzUWcIT6j5WVWVoLCHpmuYzmToNGeiVar\"\n}"
 						}
 					},
 					"status": "OK",
@@ -685,7 +687,7 @@
 						{
 							"name": "date",
 							"key": "date",
-							"value": "Sun, 24 Sep 2017 22:48:17 GMT",
+							"value": "Mon, 16 Oct 2017 01:31:51 GMT",
 							"description": "The date and time that the message was sent"
 						},
 						{
@@ -715,13 +717,13 @@
 						{
 							"name": "x-ratelimit-remaining",
 							"key": "x-ratelimit-remaining",
-							"value": "57",
+							"value": "59",
 							"description": "Custom header"
 						}
 					],
 					"cookie": [],
-					"responseTime": 877,
-					"body": "{\"id\":8,\"name\":\"Facundo\",\"last_name\":\"Encina\",\"email\":\"facundo.encina@gmail.com\",\"created_at\":\"2017-09-24 22:48:07\",\"updated_at\":\"2017-09-24 22:48:07\"}"
+					"responseTime": 923,
+					"body": "{\"accessToken\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjdlMDIyMzg0Y2U3OWQyNzcxNWJkN2E4MDkzMjg5Mzg1MGYwYzhmYTRlNmJkMDFhOTdlODgzMTY4MjExOTlkMDk3ZGI0ZGZlMTE5ZGI1ODc1In0.eyJhdWQiOiIxIiwianRpIjoiN2UwMjIzODRjZTc5ZDI3NzE1YmQ3YTgwOTMyODkzODUwZjBjOGZhNGU2YmQwMWE5N2U4ODMxNjgyMTE5OWQwOTdkYjRkZmUxMTlkYjU4NzUiLCJpYXQiOjE1MDgxMTc1MTEsIm5iZiI6MTUwODExNzUxMSwiZXhwIjoxNTM5NjUzNTExLCJzdWIiOiI5Iiwic2NvcGVzIjpbXX0.d-SyLWJjbKrRR_CmM8bSmXHc-8-p8gH4vK7D63w4R8S7ZA9K3kG6Zpa6XP-t62T8logX1skxILk8jnhnqbwfrHTjQe8jmpK2KoJuXheM2Ign4NG72uBe5YHSmmoMwyqD1xztWq3oUn5W8vrs910XFlty2twuHt2X_W7KDFu9BVJufmLRrYfOUqK7hpB3vDgFmMG2DCC-TAzNa-zHko_I_PFPbIBIL4DuZPgsIyUvUOCZ2HbWQ8_80GZ51AbMj0FS9cnIzZXbqeAEC_-CYkOQGO6z-kXa_OFpzEXjhwvRjnEya-wExi3VqRNkut4z1Z_M9jFhHHhTqHIZk2s7Z0H9NWWAnZCOwGXsgEFUsqO23lWp3E9aSgDit1kaNldhI4sQjPWeqXjqmpusOSEoNMX1R36bjDd4VVx9dIcf-8jYQfUixre7f5vUoHAqA2mmVi9qNCNIih_A-Cb6x6TmRQcrfvLgdmDmK0nA5H2Wyx-1kfo9T2lhaiWE2BzDZPieJh8s03K3Q1RG-Z1ebWAokZgxY0fw8cNi1TEzgPt0PdG3hANytMDDqOBP7MwMYepy5h7iFfDGFhb2_KOnB10RDCnshCyzywAKSPjsAkqQ28UhDwfWp6EFdRHHXsfjgL3kM6Kx9V7PPgNoVTQYXMgdCqiFZIhCGyi2W8L7Iw7A6KQqhjo\",\"token\":{\"id\":\"7e022384ce79d27715bd7a80932893850f0c8fa4e6bd01a97e88316821199d097db4dfe119db5875\",\"user_id\":9,\"client_id\":1,\"name\":\"socialLoginToken\",\"scopes\":[],\"revoked\":false,\"created_at\":\"2017-10-16 01:31:51\",\"updated_at\":\"2017-10-16 01:31:51\",\"expires_at\":\"2018-10-16 01:31:51\"}}"
 				}
 			]
 		},
@@ -863,7 +865,7 @@
 			},
 			"response": [
 				{
-					"id": "638881c2-e65b-4c38-aac9-d1f0f7edb31e",
+					"id": "349535b9-80d1-4b6d-843a-c57be6b00115",
 					"name": "Search products by name",
 					"originalRequest": {
 						"url": {
@@ -975,7 +977,7 @@
 					"body": "[{\"id\":2,\"name\":\"Leche Cart\\u00f3n La Serenisima\",\"price\":\"13.50\",\"category_id\":1,\"created_at\":\"2017-10-10 21:02:29\",\"updated_at\":\"2017-10-10 21:02:29\",\"deleted_at\":null}]"
 				},
 				{
-					"id": "00738909-ca07-4918-bd83-3396acc26cae",
+					"id": "70a1a057-a181-49d9-8668-f35e831086d2",
 					"name": "Search model without filters returns all products",
 					"originalRequest": {
 						"url": "http://{{host}}/api/search/products",
@@ -1067,6 +1069,154 @@
 					"body": "[{\"id\":1,\"name\":\"Coca-Cola 3lt.\",\"price\":\"50.00\",\"category_id\":3,\"created_at\":\"2017-10-10 21:02:29\",\"updated_at\":\"2017-10-10 21:02:29\",\"deleted_at\":null},{\"id\":2,\"name\":\"Leche Cart\\u00f3n La Serenisima\",\"price\":\"13.50\",\"category_id\":1,\"created_at\":\"2017-10-10 21:02:29\",\"updated_at\":\"2017-10-10 21:02:29\",\"deleted_at\":null},{\"id\":3,\"name\":\"TV Samsung 40''\",\"price\":\"50.00\",\"category_id\":2,\"created_at\":\"2017-10-10 21:02:29\",\"updated_at\":\"2017-10-10 21:02:29\",\"deleted_at\":null},{\"id\":4,\"name\":\"Short Nike\",\"price\":\"520.00\",\"category_id\":4,\"created_at\":\"2017-10-10 21:02:29\",\"updated_at\":\"2017-10-10 21:02:29\",\"deleted_at\":null},{\"id\":5,\"name\":\"Matarazzo Coditos\",\"price\":\"27.50\",\"category_id\":5,\"created_at\":\"2017-10-10 21:02:29\",\"updated_at\":\"2017-10-10 21:02:29\",\"deleted_at\":null}]"
 				}
 			]
+		},
+		{
+			"name": "Get user's group",
+			"request": {
+				"url": "http://{{host}}/api/groups",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImNlZmEwNjczN2ZmYjMwZGU4OWQyMmNlYjA1YWM2NTE5NTU5MzA4MzA4NGM4YmI4YjhjNWEzYzE4YTIwZmIzNmE3YzJkMDIwZTNkZWYxZDkyIn0.eyJhdWQiOiIyIiwianRpIjoiY2VmYTA2NzM3ZmZiMzBkZTg5ZDIyY2ViMDVhYzY1MTk1NTkzMDgzMDg0YzhiYjhiOGM1YTNjMThhMjBmYjM2YTdjMmQwMjBlM2RlZjFkOTIiLCJpYXQiOjE1MDczNTc0MTMsIm5iZiI6MTUwNzM1NzQxMywiZXhwIjoxNTM4ODkzNDEzLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.TgRk9aJcIHluXPQLg0_g39HgtvdWBrB0th3ghRmlYIEIrwU37pDj94TNeCOJKhmYBqvZ0YIhx8dVppe1WFnLD9YPe9Rrso60F1tVBo1pp0yzQddl1aMs6t9zWkmedW50IlP5KGf98z5UCvBMpJriEDq3VbUg_i5P_KQa3CB_UtIey2ZSyzFqjb2irqrQKrceq9OLVMrGR_bkoV8IXg6lxr2Dt4p9SNYvvggz1dpSMBBh8v1sqF0kreDfRCwkCwuEP4vLTduXpvFVZdUJH_FhOsTpDINJ8_RYX8VURe2x0A2VMxnjJ8NxhdU1XT06drIiJ5RVkwI8LaS4-PZotk1ygukIXzyDBpK8gmvoLb8Tnun5sGFBi6tYpgj0fNdBDCfJMPg_3xmJBtA4LNdW6B65kAZt9JjGaITXPDlh2WBAefusuWsoQ5CIMONuA12vzpNoAfirO0EnlvoLiqwzcruipMeeO3dzN1tZ_Ir1Ai2VNaS7xcYeBJ6nGT_mVKnRKWoAbmxn52p88RoawH0-vxnsR-1zWB9QRAvu7Ceoasmm-TJWrH7Ih0VEtrKLICuyUKkJM8Hu3UwKhWNAvbfplwUXZud0IdxHwc6y5mzQkUtD8z4uC0qxlGuv4G3Yoab7zAESXZQnKUNKiE8arw5WcaH3I61jIgdu5c7s7X2m23ahZwA",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get group's lists",
+			"request": {
+				"url": "http://{{host}}/api/groups/3/lists",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImNlZmEwNjczN2ZmYjMwZGU4OWQyMmNlYjA1YWM2NTE5NTU5MzA4MzA4NGM4YmI4YjhjNWEzYzE4YTIwZmIzNmE3YzJkMDIwZTNkZWYxZDkyIn0.eyJhdWQiOiIyIiwianRpIjoiY2VmYTA2NzM3ZmZiMzBkZTg5ZDIyY2ViMDVhYzY1MTk1NTkzMDgzMDg0YzhiYjhiOGM1YTNjMThhMjBmYjM2YTdjMmQwMjBlM2RlZjFkOTIiLCJpYXQiOjE1MDczNTc0MTMsIm5iZiI6MTUwNzM1NzQxMywiZXhwIjoxNTM4ODkzNDEzLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.TgRk9aJcIHluXPQLg0_g39HgtvdWBrB0th3ghRmlYIEIrwU37pDj94TNeCOJKhmYBqvZ0YIhx8dVppe1WFnLD9YPe9Rrso60F1tVBo1pp0yzQddl1aMs6t9zWkmedW50IlP5KGf98z5UCvBMpJriEDq3VbUg_i5P_KQa3CB_UtIey2ZSyzFqjb2irqrQKrceq9OLVMrGR_bkoV8IXg6lxr2Dt4p9SNYvvggz1dpSMBBh8v1sqF0kreDfRCwkCwuEP4vLTduXpvFVZdUJH_FhOsTpDINJ8_RYX8VURe2x0A2VMxnjJ8NxhdU1XT06drIiJ5RVkwI8LaS4-PZotk1ygukIXzyDBpK8gmvoLb8Tnun5sGFBi6tYpgj0fNdBDCfJMPg_3xmJBtA4LNdW6B65kAZt9JjGaITXPDlh2WBAefusuWsoQ5CIMONuA12vzpNoAfirO0EnlvoLiqwzcruipMeeO3dzN1tZ_Ir1Ai2VNaS7xcYeBJ6nGT_mVKnRKWoAbmxn52p88RoawH0-vxnsR-1zWB9QRAvu7Ceoasmm-TJWrH7Ih0VEtrKLICuyUKkJM8Hu3UwKhWNAvbfplwUXZud0IdxHwc6y5mzQkUtD8z4uC0qxlGuv4G3Yoab7zAESXZQnKUNKiE8arw5WcaH3I61jIgdu5c7s7X2m23ahZwA",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Lista de amigos",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "products[1]",
+							"value": "5",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "products[4]",
+							"value": "3",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Store group's list",
+			"request": {
+				"url": "http://{{host}}/api/groups/3/lists",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImNlZmEwNjczN2ZmYjMwZGU4OWQyMmNlYjA1YWM2NTE5NTU5MzA4MzA4NGM4YmI4YjhjNWEzYzE4YTIwZmIzNmE3YzJkMDIwZTNkZWYxZDkyIn0.eyJhdWQiOiIyIiwianRpIjoiY2VmYTA2NzM3ZmZiMzBkZTg5ZDIyY2ViMDVhYzY1MTk1NTkzMDgzMDg0YzhiYjhiOGM1YTNjMThhMjBmYjM2YTdjMmQwMjBlM2RlZjFkOTIiLCJpYXQiOjE1MDczNTc0MTMsIm5iZiI6MTUwNzM1NzQxMywiZXhwIjoxNTM4ODkzNDEzLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.TgRk9aJcIHluXPQLg0_g39HgtvdWBrB0th3ghRmlYIEIrwU37pDj94TNeCOJKhmYBqvZ0YIhx8dVppe1WFnLD9YPe9Rrso60F1tVBo1pp0yzQddl1aMs6t9zWkmedW50IlP5KGf98z5UCvBMpJriEDq3VbUg_i5P_KQa3CB_UtIey2ZSyzFqjb2irqrQKrceq9OLVMrGR_bkoV8IXg6lxr2Dt4p9SNYvvggz1dpSMBBh8v1sqF0kreDfRCwkCwuEP4vLTduXpvFVZdUJH_FhOsTpDINJ8_RYX8VURe2x0A2VMxnjJ8NxhdU1XT06drIiJ5RVkwI8LaS4-PZotk1ygukIXzyDBpK8gmvoLb8Tnun5sGFBi6tYpgj0fNdBDCfJMPg_3xmJBtA4LNdW6B65kAZt9JjGaITXPDlh2WBAefusuWsoQ5CIMONuA12vzpNoAfirO0EnlvoLiqwzcruipMeeO3dzN1tZ_Ir1Ai2VNaS7xcYeBJ6nGT_mVKnRKWoAbmxn52p88RoawH0-vxnsR-1zWB9QRAvu7Ceoasmm-TJWrH7Ih0VEtrKLICuyUKkJM8Hu3UwKhWNAvbfplwUXZud0IdxHwc6y5mzQkUtD8z4uC0qxlGuv4G3Yoab7zAESXZQnKUNKiE8arw5WcaH3I61jIgdu5c7s7X2m23ahZwA",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Compras\",\n\t\"products\": [\n\t\t{\n\t\t\t\"id\" : 1,\n\t\t\t\"count\": 3\n\t\t}\n\t]\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Update group's list",
+			"request": {
+				"url": "http://{{host}}/api/groups/3/lists/12",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImNlZmEwNjczN2ZmYjMwZGU4OWQyMmNlYjA1YWM2NTE5NTU5MzA4MzA4NGM4YmI4YjhjNWEzYzE4YTIwZmIzNmE3YzJkMDIwZTNkZWYxZDkyIn0.eyJhdWQiOiIyIiwianRpIjoiY2VmYTA2NzM3ZmZiMzBkZTg5ZDIyY2ViMDVhYzY1MTk1NTkzMDgzMDg0YzhiYjhiOGM1YTNjMThhMjBmYjM2YTdjMmQwMjBlM2RlZjFkOTIiLCJpYXQiOjE1MDczNTc0MTMsIm5iZiI6MTUwNzM1NzQxMywiZXhwIjoxNTM4ODkzNDEzLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.TgRk9aJcIHluXPQLg0_g39HgtvdWBrB0th3ghRmlYIEIrwU37pDj94TNeCOJKhmYBqvZ0YIhx8dVppe1WFnLD9YPe9Rrso60F1tVBo1pp0yzQddl1aMs6t9zWkmedW50IlP5KGf98z5UCvBMpJriEDq3VbUg_i5P_KQa3CB_UtIey2ZSyzFqjb2irqrQKrceq9OLVMrGR_bkoV8IXg6lxr2Dt4p9SNYvvggz1dpSMBBh8v1sqF0kreDfRCwkCwuEP4vLTduXpvFVZdUJH_FhOsTpDINJ8_RYX8VURe2x0A2VMxnjJ8NxhdU1XT06drIiJ5RVkwI8LaS4-PZotk1ygukIXzyDBpK8gmvoLb8Tnun5sGFBi6tYpgj0fNdBDCfJMPg_3xmJBtA4LNdW6B65kAZt9JjGaITXPDlh2WBAefusuWsoQ5CIMONuA12vzpNoAfirO0EnlvoLiqwzcruipMeeO3dzN1tZ_Ir1Ai2VNaS7xcYeBJ6nGT_mVKnRKWoAbmxn52p88RoawH0-vxnsR-1zWB9QRAvu7Ceoasmm-TJWrH7Ih0VEtrKLICuyUKkJM8Hu3UwKhWNAvbfplwUXZud0IdxHwc6y5mzQkUtD8z4uC0qxlGuv4G3Yoab7zAESXZQnKUNKiE8arw5WcaH3I61jIgdu5c7s7X2m23ahZwA",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Editado\",\n\t\"products\": [\n\t\t{\n\t\t\t\"id\" : 100,\n\t\t\t\"count\": 3\n\t\t}\n\t]\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Delete group's list",
+			"request": {
+				"url": "http://{{host}}/api/groups/3/lists/13",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImNlZmEwNjczN2ZmYjMwZGU4OWQyMmNlYjA1YWM2NTE5NTU5MzA4MzA4NGM4YmI4YjhjNWEzYzE4YTIwZmIzNmE3YzJkMDIwZTNkZWYxZDkyIn0.eyJhdWQiOiIyIiwianRpIjoiY2VmYTA2NzM3ZmZiMzBkZTg5ZDIyY2ViMDVhYzY1MTk1NTkzMDgzMDg0YzhiYjhiOGM1YTNjMThhMjBmYjM2YTdjMmQwMjBlM2RlZjFkOTIiLCJpYXQiOjE1MDczNTc0MTMsIm5iZiI6MTUwNzM1NzQxMywiZXhwIjoxNTM4ODkzNDEzLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.TgRk9aJcIHluXPQLg0_g39HgtvdWBrB0th3ghRmlYIEIrwU37pDj94TNeCOJKhmYBqvZ0YIhx8dVppe1WFnLD9YPe9Rrso60F1tVBo1pp0yzQddl1aMs6t9zWkmedW50IlP5KGf98z5UCvBMpJriEDq3VbUg_i5P_KQa3CB_UtIey2ZSyzFqjb2irqrQKrceq9OLVMrGR_bkoV8IXg6lxr2Dt4p9SNYvvggz1dpSMBBh8v1sqF0kreDfRCwkCwuEP4vLTduXpvFVZdUJH_FhOsTpDINJ8_RYX8VURe2x0A2VMxnjJ8NxhdU1XT06drIiJ5RVkwI8LaS4-PZotk1ygukIXzyDBpK8gmvoLb8Tnun5sGFBi6tYpgj0fNdBDCfJMPg_3xmJBtA4LNdW6B65kAZt9JjGaITXPDlh2WBAefusuWsoQ5CIMONuA12vzpNoAfirO0EnlvoLiqwzcruipMeeO3dzN1tZ_Ir1Ai2VNaS7xcYeBJ6nGT_mVKnRKWoAbmxn52p88RoawH0-vxnsR-1zWB9QRAvu7Ceoasmm-TJWrH7Ih0VEtrKLICuyUKkJM8Hu3UwKhWNAvbfplwUXZud0IdxHwc6y5mzQkUtD8z4uC0qxlGuv4G3Yoab7zAESXZQnKUNKiE8arw5WcaH3I61jIgdu5c7s7X2m23ahZwA",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
 		}
 	]
 }

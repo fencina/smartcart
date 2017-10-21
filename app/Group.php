@@ -14,6 +14,7 @@ class Group extends Model
      */
     protected $fillable = [
         'name',
+        'personal',
     ];
 
     /**
@@ -29,5 +30,13 @@ class Group extends Model
     public function clients()
     {
         return $this->belongsToMany(Client::class)->withPivot('owner');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function lists()
+    {
+        return $this->hasMany(PurchaseList::class);
     }
 }
