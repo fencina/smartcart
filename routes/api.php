@@ -18,7 +18,7 @@ Route::post('/login', 'LoginController@login');
 Route::post('/facebookLogin', 'LoginController@facebookLogin');
 Route::post('/googleLogin', 'LoginController@googleLogin');
 
-Route::resource('purchases', 'PurchasesController', ['only' => ['store']]);
+Route::post('reader/purchases', ['uses' => 'PurchasesController@storeFromReader']);
 
 Route::middleware(['auth:api'])->group( function () {
     Route::resource('groups', 'GroupController', ['except' => ['create', 'edit', 'delete']]);
@@ -26,5 +26,6 @@ Route::middleware(['auth:api'])->group( function () {
 
     Route::get('search/{model}', ['as' => 'search.model', 'uses' => 'SearcherController@search']);
 
+    Route::resource('purchases', 'PurchasesController', ['only' => ['store']]);
     Route::resource('groups.purchases', 'PurchasesController', ['only' => ['index', 'show']]);
 });

@@ -46,6 +46,38 @@ class PurchasesController extends Controller
     }
 
     /**
+     * Store a purchase searching products by epc
+     *
+     * @param PurchaseFormRequest $request
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function storeFromReader(PurchaseFormRequest $request)
+    {
+        $purchase = new Purchase();
+
+        $purchase->status()->associate(Status::pending());
+
+        $requestedProducts = collect($request->input('products'));
+
+        $products = Product::whereIn('epc', $requestedProducts->pluck('epc'))->get();
+
+        $purchase->amounts = $products->sum( function ($product) use ($requestedProducts) {
+            return $product->price * $requestedProducts->where('epc', $product->epc)->first()['count'];
+        });
+
+        $purchase->save();
+
+        $products = $requestedProducts->mapWithKeys(function ($requestedProduct) {
+            $product = Product::where('epc', $requestedProduct['epc'])->first();
+            return [$product->id => ['count' => 1]];
+        })->toArray();
+
+        $purchase->products()->attach($products);
+
+        return response()->json($purchase->load('products'));
+    }
+
+    /**
      *  Display the specified resource.
      *
      * @param Purchase $purchase
