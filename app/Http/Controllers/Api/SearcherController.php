@@ -19,7 +19,7 @@ class SearcherController extends Controller
         $queryBuilder = call_user_func([$modelClass, 'query']);
 
         foreach ($request->query() as $field => $value) {
-            $queryBuilder->where($field, 'like', '%'.$value.'%');
+            $queryBuilder->orWhere($field, 'like', '%'.$value.'%');
         }
 
         return response()->json($queryBuilder->get());
