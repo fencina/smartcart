@@ -31,7 +31,7 @@ class PurchasesController extends Controller
         $requestedProducts = collect($request->input('products'));
 
         $purchase->amounts = $products->sum( function ($product) use ($requestedProducts) {
-            return $product->price * $requestedProducts->where('id', $product->id)->first()['count'];
+            return $product->price * $requestedProducts->where('epc', $product->epc)->first()['count'];
         });
 
         $purchase->save();
@@ -60,16 +60,17 @@ class PurchasesController extends Controller
         $requestedProducts = collect($request->input('products'));
 
         $products = Product::whereIn('epc', $requestedProducts->pluck('epc'))->get();
+        $count = 1;
 
-        $purchase->amounts = $products->sum( function ($product) use ($requestedProducts) {
-            return $product->price * $requestedProducts->where('epc', $product->epc)->first()['count'];
+        $purchase->amounts = $products->sum( function ($product) use ($requestedProducts, $count) {
+            return $product->price * $count;
         });
 
         $purchase->save();
 
-        $products = $requestedProducts->mapWithKeys(function ($requestedProduct) {
+        $products = $requestedProducts->mapWithKeys(function ($requestedProduct) use ($count) {
             $product = Product::where('epc', $requestedProduct['epc'])->first();
-            return [$product->id => ['count' => 1]];
+            return [$product->id => ['count' => $count]];
         })->toArray();
 
         $purchase->products()->attach($products);
