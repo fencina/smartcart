@@ -26,108 +26,13 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"name\": \"Nombre\",\n\t\"last_name\": \"Apellido\",\n\t\"email\": \"email@email.com\",\n\t\"password\": \"pass1234\"\n}"
+					"raw": "{\n  \"name\": \"Nombre\",\n  \"last_name\": \"Apellido\",\n  \"email\": \"email@email.com\",\n  \"password\": \"pass1234\"\n}"
 				},
 				"description": "Registra un cliente en la app mobile"
 			},
 			"response": [
 				{
-					"id": "8bf1c000-ef5b-4621-a4fa-3208526b5b98",
-					"name": "Register client successfully",
-					"originalRequest": {
-						"url": "http://{{host}}/api/register",
-						"method": "POST",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"description": "",
-								"warning": ""
-							},
-							{
-								"key": "Content-Type",
-								"name": "Content-Type",
-								"value": "application/json",
-								"description": ""
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n\t\"name\": \"Nombre\",\n\t\"last_name\": \"Apellido\",\n\t\"email\": \"email@email.com\",\n\t\"password\": \"pass1234\"\n}"
-						}
-					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": "json",
-					"_postman_previewtype": "text",
-					"header": [
-						{
-							"name": "cache-control",
-							"key": "cache-control",
-							"value": "no-cache, private",
-							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
-						},
-						{
-							"name": "connection",
-							"key": "connection",
-							"value": "keep-alive",
-							"description": "Options that are desired for the connection"
-						},
-						{
-							"name": "content-encoding",
-							"key": "content-encoding",
-							"value": "gzip",
-							"description": "The type of encoding used on the data."
-						},
-						{
-							"name": "content-type",
-							"key": "content-type",
-							"value": "application/json",
-							"description": "The mime type of this content"
-						},
-						{
-							"name": "date",
-							"key": "date",
-							"value": "Thu, 14 Sep 2017 23:23:04 GMT",
-							"description": "The date and time that the message was sent"
-						},
-						{
-							"name": "server",
-							"key": "server",
-							"value": "nginx/1.10.3 (Ubuntu)",
-							"description": "A name for the server"
-						},
-						{
-							"name": "transfer-encoding",
-							"key": "transfer-encoding",
-							"value": "chunked",
-							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
-						},
-						{
-							"name": "vary",
-							"key": "vary",
-							"value": "Accept-Encoding",
-							"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
-						},
-						{
-							"name": "x-ratelimit-limit",
-							"key": "x-ratelimit-limit",
-							"value": "60",
-							"description": "Custom header"
-						},
-						{
-							"name": "x-ratelimit-remaining",
-							"key": "x-ratelimit-remaining",
-							"value": "59",
-							"description": "Custom header"
-						}
-					],
-					"cookie": [],
-					"responseTime": 88,
-					"body": "{\"name\":\"Nombre\",\"last_name\":\"Apellido\",\"email\":\"email@email.com\",\"updated_at\":\"2017-09-14 23:23:04\",\"created_at\":\"2017-09-14 23:23:04\",\"id\":4}"
-				},
-				{
-					"id": "fe9f08df-35c8-467a-a171-4aa7b34d2946",
+					"id": "3f6f24ce-94df-47a9-88e5-a4b771a6666c",
 					"name": "Register client with missing params",
 					"originalRequest": {
 						"url": "http://{{host}}/api/register",
@@ -160,54 +65,149 @@
 							"name": "cache-control",
 							"key": "cache-control",
 							"value": "no-cache, private",
-							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+							"description": ""
 						},
 						{
 							"name": "connection",
 							"key": "connection",
 							"value": "keep-alive",
-							"description": "Options that are desired for the connection"
+							"description": ""
 						},
 						{
 							"name": "content-type",
 							"key": "content-type",
 							"value": "application/json",
-							"description": "The mime type of this content"
+							"description": ""
 						},
 						{
 							"name": "date",
 							"key": "date",
 							"value": "Thu, 14 Sep 2017 23:24:33 GMT",
-							"description": "The date and time that the message was sent"
+							"description": ""
 						},
 						{
 							"name": "server",
 							"key": "server",
 							"value": "nginx/1.10.3 (Ubuntu)",
-							"description": "A name for the server"
+							"description": ""
 						},
 						{
 							"name": "transfer-encoding",
 							"key": "transfer-encoding",
 							"value": "chunked",
-							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+							"description": ""
 						},
 						{
 							"name": "x-ratelimit-limit",
 							"key": "x-ratelimit-limit",
 							"value": "60",
-							"description": "Custom header"
+							"description": ""
 						},
 						{
 							"name": "x-ratelimit-remaining",
 							"key": "x-ratelimit-remaining",
 							"value": "59",
-							"description": "Custom header"
+							"description": ""
 						}
 					],
 					"cookie": [],
-					"responseTime": 26,
+					"responseTime": "26",
 					"body": "{\"error\":\"ValidationException\",\"data\":{\"name\":[\"The name field is required.\"],\"last_name\":[\"The last name field is required.\"],\"email\":[\"The email field is required.\"],\"password\":[\"The password field is required.\"]}}"
+				},
+				{
+					"id": "590b3704-db36-4ebb-9f71-eb4fb2c5617f",
+					"name": "Register client successfully",
+					"originalRequest": {
+						"url": "http://{{host}}/api/register",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": "",
+								"warning": ""
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Nombre\",\n\t\"last_name\": \"Apellido\",\n\t\"email\": \"email@email.com\",\n\t\"password\": \"pass1234\"\n}"
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"name": "cache-control",
+							"key": "cache-control",
+							"value": "no-cache, private",
+							"description": ""
+						},
+						{
+							"name": "connection",
+							"key": "connection",
+							"value": "keep-alive",
+							"description": ""
+						},
+						{
+							"name": "content-encoding",
+							"key": "content-encoding",
+							"value": "gzip",
+							"description": ""
+						},
+						{
+							"name": "content-type",
+							"key": "content-type",
+							"value": "application/json",
+							"description": ""
+						},
+						{
+							"name": "date",
+							"key": "date",
+							"value": "Thu, 14 Sep 2017 23:23:04 GMT",
+							"description": ""
+						},
+						{
+							"name": "server",
+							"key": "server",
+							"value": "nginx/1.10.3 (Ubuntu)",
+							"description": ""
+						},
+						{
+							"name": "transfer-encoding",
+							"key": "transfer-encoding",
+							"value": "chunked",
+							"description": ""
+						},
+						{
+							"name": "vary",
+							"key": "vary",
+							"value": "Accept-Encoding",
+							"description": ""
+						},
+						{
+							"name": "x-ratelimit-limit",
+							"key": "x-ratelimit-limit",
+							"value": "60",
+							"description": ""
+						},
+						{
+							"name": "x-ratelimit-remaining",
+							"key": "x-ratelimit-remaining",
+							"value": "59",
+							"description": ""
+						}
+					],
+					"cookie": [],
+					"responseTime": "88",
+					"body": "{\"name\":\"Nombre\",\"last_name\":\"Apellido\",\"email\":\"email@email.com\",\"updated_at\":\"2017-09-14 23:23:04\",\"created_at\":\"2017-09-14 23:23:04\",\"id\":4}"
 				}
 			]
 		},
@@ -225,191 +225,13 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"email\": \"email@email.com\",\n\t\"password\": \"wrongpass\"\n}"
+					"raw": "{\n  \"email\": \"email@email.com\",\n  \"password\": \"wrongpass\"\n}"
 				},
 				"description": ""
 			},
 			"response": [
 				{
-					"id": "6e489eb4-1b96-4625-815d-c3ca0cdec10f",
-					"name": "Login client successfully",
-					"originalRequest": {
-						"url": "http://{{host}}/api/login",
-						"method": "POST",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"description": "",
-								"warning": ""
-							},
-							{
-								"key": "Content-Type",
-								"name": "Content-Type",
-								"value": "application/json",
-								"description": ""
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n\t\"email\": \"email@email.com\",\n\t\"password\": \"pass1234\"\n}"
-						}
-					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": "json",
-					"_postman_previewtype": "text",
-					"header": [
-						{
-							"name": "cache-control",
-							"key": "cache-control",
-							"value": "no-cache, private",
-							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
-						},
-						{
-							"name": "connection",
-							"key": "connection",
-							"value": "keep-alive",
-							"description": "Options that are desired for the connection"
-						},
-						{
-							"name": "content-encoding",
-							"key": "content-encoding",
-							"value": "gzip",
-							"description": "The type of encoding used on the data."
-						},
-						{
-							"name": "content-type",
-							"key": "content-type",
-							"value": "application/json",
-							"description": "The mime type of this content"
-						},
-						{
-							"name": "date",
-							"key": "date",
-							"value": "Thu, 14 Sep 2017 23:46:58 GMT",
-							"description": "The date and time that the message was sent"
-						},
-						{
-							"name": "server",
-							"key": "server",
-							"value": "nginx/1.10.3 (Ubuntu)",
-							"description": "A name for the server"
-						},
-						{
-							"name": "transfer-encoding",
-							"key": "transfer-encoding",
-							"value": "chunked",
-							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
-						},
-						{
-							"name": "vary",
-							"key": "vary",
-							"value": "Accept-Encoding",
-							"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
-						},
-						{
-							"name": "x-ratelimit-limit",
-							"key": "x-ratelimit-limit",
-							"value": "60",
-							"description": "Custom header"
-						},
-						{
-							"name": "x-ratelimit-remaining",
-							"key": "x-ratelimit-remaining",
-							"value": "59",
-							"description": "Custom header"
-						}
-					],
-					"cookie": [],
-					"responseTime": 816,
-					"body": "{\"token_type\":\"Bearer\",\"expires_in\":31536000,\"access_token\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjJkMTc5N2VkZTZhMzY0ZmM1MGQ3MGMzMDU1ZDE4MGFkMzZjYjQ0MTM4MjE0MjRmM2ZhNWE4M2YwMTU2NjBjYzJiYzQ5MTE1MDY4MDcyZTdkIn0.eyJhdWQiOiIyIiwianRpIjoiMmQxNzk3ZWRlNmEzNjRmYzUwZDcwYzMwNTVkMTgwYWQzNmNiNDQxMzgyMTQyNGYzZmE1YTgzZjAxNTY2MGNjMmJjNDkxMTUwNjgwNzJlN2QiLCJpYXQiOjE1MDU0MzI4MTgsIm5iZiI6MTUwNTQzMjgxOCwiZXhwIjoxNTM2OTY4ODE4LCJzdWIiOiI1Iiwic2NvcGVzIjpbXX0.B9kfmUPxO96_71tK2PKnaD4ol_Yoob6kWxWCo3Ea8wb8Syp0uzKmeYSO15Bi2Vt9NCubjF6Ojevv9AKioVsQoyDCJWslSk7Twx9Yt9jYznCYaU9Le24Fe5pe5x4ya3fPP0HfbElXnFCOjX8brm5CkcD74lLJtKGO4SGlRL9nqI_2bR2wkCLMc3rAQOa_C2gPZxfd65ElW_D1VkYVAGPCN4132JWmGNq0x98oRftiYg3kxC_xTOzfKKXbhuTGOsYtedTJw6lj7Nz8tvxdZu_tzhekXInoUSvPuijXHBhhXpfTW6MHRQNSiUutycZ-ABN_IVMF10DrybnFq3cJBZfNHH-Nup0ubocpoOAJ5ZTll3dxgZErhlh0e7vJnodssnvdCxHW-eBXTdBkI6oMC8CGQC3aLF4jIqkKF4cQVredUFUan0YmhZ9y4wZEnfP6PfglTEkLarIWbJYAkIw2xmDcfQSlls5XiuUCDwl64tVkWe-4lMgAgdNxjxiQzlcw2PaQCrYAdVFToWTEu1c7RRp-g4h62i4a7CHFtZ6K-hi1HFVOdBmFfSNQO5ZCaCW1ftQWjc37RF0OY4oiXt-tq8p0cUVk2k0GfpGHnq5S9q2eppAUgXq5nB_2W_r415vJT5PWiuo5gPCMEscDu-gkByXYs6_7byWiFfzwFT4pOd6Iars\",\"refresh_token\":\"def50200575f2299a1510e9d0d06e9d72d8b112f29ffaf821b820e501d3636daa73eafb5066227251258caea84ce54190e3b18b6c4cff39ac98d8b028a21491ae0342edb49ad83e092d34b87aef06ff4c77958f852f2e226d2c5808c86269fbe49cd042cee54787504737328c3de95b54c102752e65fdb2ceceab8cad56ee4dca4e67b595cde05bb170c6a0fb097abfda5417825280b0bdb51b14c63eb77873f08f24a8375903bbc97fa5141e64855df71e97c9cf42b1750121242d49c99243118a5042d99d63eb87250e104a8c5581831ee17583c17ab1244ad8b8e10dd4045093c71e4daa9cdfa033bf1282656af769856d5fb1fbeb5ee2c75ffb42cdfbb7868692d7ea8b6699df01b712652133c1e411b00204e69748ef74adf238b0bfa41319581eaa12f70dff9b73f52d0c1eb2d18ab3e9c54ace481804d0c9b491331d9f1368208dafafe80d960f9e66010be5c6d3a7a688a82295861aedf3abaf78c\"}"
-				},
-				{
-					"id": "1d61d86e-43f7-47b2-b80d-97941a19b3d1",
-					"name": "Login client with missing param",
-					"originalRequest": {
-						"url": "http://{{host}}/api/login",
-						"method": "POST",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"description": "",
-								"warning": ""
-							},
-							{
-								"key": "Content-Type",
-								"name": "Content-Type",
-								"value": "application/json",
-								"description": ""
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n\t\"email\": \"email@email.com\"\n}"
-						}
-					},
-					"status": "Bad Request",
-					"code": 400,
-					"_postman_previewlanguage": "json",
-					"_postman_previewtype": "text",
-					"header": [
-						{
-							"name": "cache-control",
-							"key": "cache-control",
-							"value": "no-cache, private",
-							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
-						},
-						{
-							"name": "connection",
-							"key": "connection",
-							"value": "keep-alive",
-							"description": "Options that are desired for the connection"
-						},
-						{
-							"name": "content-type",
-							"key": "content-type",
-							"value": "application/json",
-							"description": "The mime type of this content"
-						},
-						{
-							"name": "date",
-							"key": "date",
-							"value": "Thu, 14 Sep 2017 23:47:55 GMT",
-							"description": "The date and time that the message was sent"
-						},
-						{
-							"name": "server",
-							"key": "server",
-							"value": "nginx/1.10.3 (Ubuntu)",
-							"description": "A name for the server"
-						},
-						{
-							"name": "transfer-encoding",
-							"key": "transfer-encoding",
-							"value": "chunked",
-							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
-						},
-						{
-							"name": "x-ratelimit-limit",
-							"key": "x-ratelimit-limit",
-							"value": "60",
-							"description": "Custom header"
-						},
-						{
-							"name": "x-ratelimit-remaining",
-							"key": "x-ratelimit-remaining",
-							"value": "58",
-							"description": "Custom header"
-						}
-					],
-					"cookie": [],
-					"responseTime": 32,
-					"body": "{\"error\":\"ValidationException\",\"data\":{\"password\":[\"The password field is required.\"]}}"
-				},
-				{
-					"id": "538eb3dc-f474-4a16-9a50-daf31d128b33",
+					"id": "44e49f6d-ba95-47a8-badb-b6517a45c537",
 					"name": "Login client with invalid credentials",
 					"originalRequest": {
 						"url": "http://{{host}}/api/login",
@@ -442,54 +264,232 @@
 							"name": "cache-control",
 							"key": "cache-control",
 							"value": "no-cache, private",
-							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+							"description": ""
 						},
 						{
 							"name": "connection",
 							"key": "connection",
 							"value": "keep-alive",
-							"description": "Options that are desired for the connection"
+							"description": ""
 						},
 						{
 							"name": "content-type",
 							"key": "content-type",
 							"value": "application/json",
-							"description": "The mime type of this content"
+							"description": ""
 						},
 						{
 							"name": "date",
 							"key": "date",
 							"value": "Thu, 14 Sep 2017 23:48:38 GMT",
-							"description": "The date and time that the message was sent"
+							"description": ""
 						},
 						{
 							"name": "server",
 							"key": "server",
 							"value": "nginx/1.10.3 (Ubuntu)",
-							"description": "A name for the server"
+							"description": ""
 						},
 						{
 							"name": "transfer-encoding",
 							"key": "transfer-encoding",
 							"value": "chunked",
-							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+							"description": ""
 						},
 						{
 							"name": "x-ratelimit-limit",
 							"key": "x-ratelimit-limit",
 							"value": "60",
-							"description": "Custom header"
+							"description": ""
 						},
 						{
 							"name": "x-ratelimit-remaining",
 							"key": "x-ratelimit-remaining",
 							"value": "59",
-							"description": "Custom header"
+							"description": ""
 						}
 					],
 					"cookie": [],
-					"responseTime": 852,
+					"responseTime": "852",
 					"body": "{\"error\":\"Client error: `POST http:\\/\\/smartcart.dev\\/oauth\\/token` resulted in a `401 Unauthorized` response:\\n{\\\"error\\\":\\\"invalid_credentials\\\",\\\"message\\\":\\\"The user credentials were incorrect.\\\"}\\n\"}"
+				},
+				{
+					"id": "9ef667ec-86b6-492b-96ad-4e00c55dc02d",
+					"name": "Login client with missing param",
+					"originalRequest": {
+						"url": "http://{{host}}/api/login",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": "",
+								"warning": ""
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\": \"email@email.com\"\n}"
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"name": "cache-control",
+							"key": "cache-control",
+							"value": "no-cache, private",
+							"description": ""
+						},
+						{
+							"name": "connection",
+							"key": "connection",
+							"value": "keep-alive",
+							"description": ""
+						},
+						{
+							"name": "content-type",
+							"key": "content-type",
+							"value": "application/json",
+							"description": ""
+						},
+						{
+							"name": "date",
+							"key": "date",
+							"value": "Thu, 14 Sep 2017 23:47:55 GMT",
+							"description": ""
+						},
+						{
+							"name": "server",
+							"key": "server",
+							"value": "nginx/1.10.3 (Ubuntu)",
+							"description": ""
+						},
+						{
+							"name": "transfer-encoding",
+							"key": "transfer-encoding",
+							"value": "chunked",
+							"description": ""
+						},
+						{
+							"name": "x-ratelimit-limit",
+							"key": "x-ratelimit-limit",
+							"value": "60",
+							"description": ""
+						},
+						{
+							"name": "x-ratelimit-remaining",
+							"key": "x-ratelimit-remaining",
+							"value": "58",
+							"description": ""
+						}
+					],
+					"cookie": [],
+					"responseTime": "32",
+					"body": "{\"error\":\"ValidationException\",\"data\":{\"password\":[\"The password field is required.\"]}}"
+				},
+				{
+					"id": "b4621620-8b43-4418-8d61-b0432c917dd3",
+					"name": "Login client successfully",
+					"originalRequest": {
+						"url": "http://{{host}}/api/login",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": "",
+								"warning": ""
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\": \"email@email.com\",\n\t\"password\": \"pass1234\"\n}"
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"name": "cache-control",
+							"key": "cache-control",
+							"value": "no-cache, private",
+							"description": ""
+						},
+						{
+							"name": "connection",
+							"key": "connection",
+							"value": "keep-alive",
+							"description": ""
+						},
+						{
+							"name": "content-encoding",
+							"key": "content-encoding",
+							"value": "gzip",
+							"description": ""
+						},
+						{
+							"name": "content-type",
+							"key": "content-type",
+							"value": "application/json",
+							"description": ""
+						},
+						{
+							"name": "date",
+							"key": "date",
+							"value": "Thu, 14 Sep 2017 23:46:58 GMT",
+							"description": ""
+						},
+						{
+							"name": "server",
+							"key": "server",
+							"value": "nginx/1.10.3 (Ubuntu)",
+							"description": ""
+						},
+						{
+							"name": "transfer-encoding",
+							"key": "transfer-encoding",
+							"value": "chunked",
+							"description": ""
+						},
+						{
+							"name": "vary",
+							"key": "vary",
+							"value": "Accept-Encoding",
+							"description": ""
+						},
+						{
+							"name": "x-ratelimit-limit",
+							"key": "x-ratelimit-limit",
+							"value": "60",
+							"description": ""
+						},
+						{
+							"name": "x-ratelimit-remaining",
+							"key": "x-ratelimit-remaining",
+							"value": "59",
+							"description": ""
+						}
+					],
+					"cookie": [],
+					"responseTime": "816",
+					"body": "{\"token_type\":\"Bearer\",\"expires_in\":31536000,\"access_token\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjJkMTc5N2VkZTZhMzY0ZmM1MGQ3MGMzMDU1ZDE4MGFkMzZjYjQ0MTM4MjE0MjRmM2ZhNWE4M2YwMTU2NjBjYzJiYzQ5MTE1MDY4MDcyZTdkIn0.eyJhdWQiOiIyIiwianRpIjoiMmQxNzk3ZWRlNmEzNjRmYzUwZDcwYzMwNTVkMTgwYWQzNmNiNDQxMzgyMTQyNGYzZmE1YTgzZjAxNTY2MGNjMmJjNDkxMTUwNjgwNzJlN2QiLCJpYXQiOjE1MDU0MzI4MTgsIm5iZiI6MTUwNTQzMjgxOCwiZXhwIjoxNTM2OTY4ODE4LCJzdWIiOiI1Iiwic2NvcGVzIjpbXX0.B9kfmUPxO96_71tK2PKnaD4ol_Yoob6kWxWCo3Ea8wb8Syp0uzKmeYSO15Bi2Vt9NCubjF6Ojevv9AKioVsQoyDCJWslSk7Twx9Yt9jYznCYaU9Le24Fe5pe5x4ya3fPP0HfbElXnFCOjX8brm5CkcD74lLJtKGO4SGlRL9nqI_2bR2wkCLMc3rAQOa_C2gPZxfd65ElW_D1VkYVAGPCN4132JWmGNq0x98oRftiYg3kxC_xTOzfKKXbhuTGOsYtedTJw6lj7Nz8tvxdZu_tzhekXInoUSvPuijXHBhhXpfTW6MHRQNSiUutycZ-ABN_IVMF10DrybnFq3cJBZfNHH-Nup0ubocpoOAJ5ZTll3dxgZErhlh0e7vJnodssnvdCxHW-eBXTdBkI6oMC8CGQC3aLF4jIqkKF4cQVredUFUan0YmhZ9y4wZEnfP6PfglTEkLarIWbJYAkIw2xmDcfQSlls5XiuUCDwl64tVkWe-4lMgAgdNxjxiQzlcw2PaQCrYAdVFToWTEu1c7RRp-g4h62i4a7CHFtZ6K-hi1HFVOdBmFfSNQO5ZCaCW1ftQWjc37RF0OY4oiXt-tq8p0cUVk2k0GfpGHnq5S9q2eppAUgXq5nB_2W_r415vJT5PWiuo5gPCMEscDu-gkByXYs6_7byWiFfzwFT4pOd6Iars\",\"refresh_token\":\"def50200575f2299a1510e9d0d06e9d72d8b112f29ffaf821b820e501d3636daa73eafb5066227251258caea84ce54190e3b18b6c4cff39ac98d8b028a21491ae0342edb49ad83e092d34b87aef06ff4c77958f852f2e226d2c5808c86269fbe49cd042cee54787504737328c3de95b54c102752e65fdb2ceceab8cad56ee4dca4e67b595cde05bb170c6a0fb097abfda5417825280b0bdb51b14c63eb77873f08f24a8375903bbc97fa5141e64855df71e97c9cf42b1750121242d49c99243118a5042d99d63eb87250e104a8c5581831ee17583c17ab1244ad8b8e10dd4045093c71e4daa9cdfa033bf1282656af769856d5fb1fbeb5ee2c75ffb42cdfbb7868692d7ea8b6699df01b712652133c1e411b00204e69748ef74adf238b0bfa41319581eaa12f70dff9b73f52d0c1eb2d18ab3e9c54ace481804d0c9b491331d9f1368208dafafe80d960f9e66010be5c6d3a7a688a82295861aedf3abaf78c\"}"
 				}
 			]
 		},
@@ -513,7 +513,7 @@
 			},
 			"response": [
 				{
-					"id": "7e67d911-98f4-40b4-bc9b-2777616b9858",
+					"id": "9781f0f3-59d6-421d-aedd-825d001383c9",
 					"name": "Facebook Login Successfully",
 					"originalRequest": {
 						"url": "http://{{host}}/api/facebookLogin",
@@ -545,65 +545,65 @@
 							"name": "cache-control",
 							"key": "cache-control",
 							"value": "no-cache, private",
-							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+							"description": ""
 						},
 						{
 							"name": "connection",
 							"key": "connection",
 							"value": "keep-alive",
-							"description": "Options that are desired for the connection"
+							"description": ""
 						},
 						{
 							"name": "content-encoding",
 							"key": "content-encoding",
 							"value": "gzip",
-							"description": "The type of encoding used on the data."
+							"description": ""
 						},
 						{
 							"name": "content-type",
 							"key": "content-type",
 							"value": "application/json",
-							"description": "The mime type of this content"
+							"description": ""
 						},
 						{
 							"name": "date",
 							"key": "date",
 							"value": "Mon, 16 Oct 2017 01:14:34 GMT",
-							"description": "The date and time that the message was sent"
+							"description": ""
 						},
 						{
 							"name": "server",
 							"key": "server",
 							"value": "nginx/1.10.3 (Ubuntu)",
-							"description": "A name for the server"
+							"description": ""
 						},
 						{
 							"name": "transfer-encoding",
 							"key": "transfer-encoding",
 							"value": "chunked",
-							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+							"description": ""
 						},
 						{
 							"name": "vary",
 							"key": "vary",
 							"value": "Accept-Encoding",
-							"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+							"description": ""
 						},
 						{
 							"name": "x-ratelimit-limit",
 							"key": "x-ratelimit-limit",
 							"value": "60",
-							"description": "Custom header"
+							"description": ""
 						},
 						{
 							"name": "x-ratelimit-remaining",
 							"key": "x-ratelimit-remaining",
 							"value": "58",
-							"description": "Custom header"
+							"description": ""
 						}
 					],
 					"cookie": [],
-					"responseTime": 788,
+					"responseTime": "788",
 					"body": "{\"accessToken\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImVjZWFlN2RhN2NjNDVkMDA3ODE0ZTY1MzFiNjVmNzc1MmYwODgyMzVjMDVmNjAxNTJkNmVkYjZkZWFlNGY2YWNhYWNlMGM2MDg0NTllZDYwIn0.eyJhdWQiOiIxIiwianRpIjoiZWNlYWU3ZGE3Y2M0NWQwMDc4MTRlNjUzMWI2NWY3NzUyZjA4ODIzNWMwNWY2MDE1MmQ2ZWRiNmRlYWU0ZjZhY2FhY2UwYzYwODQ1OWVkNjAiLCJpYXQiOjE1MDgxMTY0NzQsIm5iZiI6MTUwODExNjQ3NCwiZXhwIjoxNTM5NjUyNDc0LCJzdWIiOiI3Iiwic2NvcGVzIjpbXX0.VmWLJkREHdZaGi_YXgG2g6rCYxQTePm9ejYWLk1cSjq8D7BCqMrphZSn40yWYC3Ryu15UDHAnY_7aJxNsbTPI2YrE_gsnGSyV4hoIdw_NK83TTK2aFQMNioKKvyA1yank8RJjuf5v_trofyJ9-2Va0osgRrZ03cYkTlFr20L7GjpSz9NCKkziBY6cZMIxMuv6UzVv1LRuZ6LNFblDH5eLw7VZB3qbL8VkCxaFEjt99Kx0_CXF8uqYnn3_cR0J8q0_WTnL31RuKLSU35FMrDQJc57aWN2LQp0yY29pg5CP_ABsvsZjmd6sVftc3uMJyTcmkn_Byc3kVUCyKwxz4AD4GiYwY100FWkkRLv-MBfczhmAnXTngU5ia0SGfOWyXJrMIPAyVDpvNl03P8gShBaya6v09OwlB6NDZy0XINugKcDP5Ew4ydcwDeT-A5FDcDKZcYbYNabOFiOlYwtJJa8dBFPca1YU6Z460A76ViCciEuJVbLNWlc8ipGrZ7IVOPoJPvuxN4h6rxHHbeKy8UjK0Lg2FdyJtwHjtXeLERDtfGU7ILMLZ3EosaJpERBn1SEM5Pu44bOz5ON4pZNZkso08ZAWhplwR_t2hDHZjMXa0FWY_9Yf32Z8YeeG563cXMzjOW7i6NDuozJIQ1MTGpOIOPY_iJuJjceAAt3y0RB8bo\",\"token\":{\"id\":\"eceae7da7cc45d007814e6531b65f7752f088235c05f60152d6edb6deae4f6acaace0c608459ed60\",\"user_id\":7,\"client_id\":1,\"name\":\"socialLoginToken\",\"scopes\":[],\"revoked\":false,\"created_at\":\"2017-10-16 01:14:34\",\"updated_at\":\"2017-10-16 01:14:34\",\"expires_at\":\"2018-10-16 01:14:34\"}}"
 				}
 			]
@@ -627,13 +627,13 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"token\": \"ya29.GlvQBG5oCFbNo-Ez0Qjo9ylLCfoRoR7fiex0bV7JU3llDwuPSs1l0wqEhmtGQLk0VQRSEMsLjWIsddxajWVOuO3UCaxHoc-sDJNCUT1ioGvR8LDIV4bWs8nUnnsH\"\n}"
+					"raw": "{\n  \"token\": \"ya29.GlvQBG5oCFbNo-Ez0Qjo9ylLCfoRoR7fiex0bV7JU3llDwuPSs1l0wqEhmtGQLk0VQRSEMsLjWIsddxajWVOuO3UCaxHoc-sDJNCUT1ioGvR8LDIV4bWs8nUnnsH\"\n}"
 				},
 				"description": ""
 			},
 			"response": [
 				{
-					"id": "2c7db84a-dff8-42fb-912a-abf81b5e67b8",
+					"id": "89199cc2-c201-4434-8bd8-fe12629d2acb",
 					"name": "Google Login Successfully",
 					"originalRequest": {
 						"url": "http://{{host}}/api/googleLogin",
@@ -664,65 +664,65 @@
 							"name": "cache-control",
 							"key": "cache-control",
 							"value": "no-cache, private",
-							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+							"description": ""
 						},
 						{
 							"name": "connection",
 							"key": "connection",
 							"value": "keep-alive",
-							"description": "Options that are desired for the connection"
+							"description": ""
 						},
 						{
 							"name": "content-encoding",
 							"key": "content-encoding",
 							"value": "gzip",
-							"description": "The type of encoding used on the data."
+							"description": ""
 						},
 						{
 							"name": "content-type",
 							"key": "content-type",
 							"value": "application/json",
-							"description": "The mime type of this content"
+							"description": ""
 						},
 						{
 							"name": "date",
 							"key": "date",
 							"value": "Mon, 16 Oct 2017 01:31:51 GMT",
-							"description": "The date and time that the message was sent"
+							"description": ""
 						},
 						{
 							"name": "server",
 							"key": "server",
 							"value": "nginx/1.10.3 (Ubuntu)",
-							"description": "A name for the server"
+							"description": ""
 						},
 						{
 							"name": "transfer-encoding",
 							"key": "transfer-encoding",
 							"value": "chunked",
-							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+							"description": ""
 						},
 						{
 							"name": "vary",
 							"key": "vary",
 							"value": "Accept-Encoding",
-							"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+							"description": ""
 						},
 						{
 							"name": "x-ratelimit-limit",
 							"key": "x-ratelimit-limit",
 							"value": "60",
-							"description": "Custom header"
+							"description": ""
 						},
 						{
 							"name": "x-ratelimit-remaining",
 							"key": "x-ratelimit-remaining",
 							"value": "59",
-							"description": "Custom header"
+							"description": ""
 						}
 					],
 					"cookie": [],
-					"responseTime": 923,
+					"responseTime": "923",
 					"body": "{\"accessToken\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjdlMDIyMzg0Y2U3OWQyNzcxNWJkN2E4MDkzMjg5Mzg1MGYwYzhmYTRlNmJkMDFhOTdlODgzMTY4MjExOTlkMDk3ZGI0ZGZlMTE5ZGI1ODc1In0.eyJhdWQiOiIxIiwianRpIjoiN2UwMjIzODRjZTc5ZDI3NzE1YmQ3YTgwOTMyODkzODUwZjBjOGZhNGU2YmQwMWE5N2U4ODMxNjgyMTE5OWQwOTdkYjRkZmUxMTlkYjU4NzUiLCJpYXQiOjE1MDgxMTc1MTEsIm5iZiI6MTUwODExNzUxMSwiZXhwIjoxNTM5NjUzNTExLCJzdWIiOiI5Iiwic2NvcGVzIjpbXX0.d-SyLWJjbKrRR_CmM8bSmXHc-8-p8gH4vK7D63w4R8S7ZA9K3kG6Zpa6XP-t62T8logX1skxILk8jnhnqbwfrHTjQe8jmpK2KoJuXheM2Ign4NG72uBe5YHSmmoMwyqD1xztWq3oUn5W8vrs910XFlty2twuHt2X_W7KDFu9BVJufmLRrYfOUqK7hpB3vDgFmMG2DCC-TAzNa-zHko_I_PFPbIBIL4DuZPgsIyUvUOCZ2HbWQ8_80GZ51AbMj0FS9cnIzZXbqeAEC_-CYkOQGO6z-kXa_OFpzEXjhwvRjnEya-wExi3VqRNkut4z1Z_M9jFhHHhTqHIZk2s7Z0H9NWWAnZCOwGXsgEFUsqO23lWp3E9aSgDit1kaNldhI4sQjPWeqXjqmpusOSEoNMX1R36bjDd4VVx9dIcf-8jYQfUixre7f5vUoHAqA2mmVi9qNCNIih_A-Cb6x6TmRQcrfvLgdmDmK0nA5H2Wyx-1kfo9T2lhaiWE2BzDZPieJh8s03K3Q1RG-Z1ebWAokZgxY0fw8cNi1TEzgPt0PdG3hANytMDDqOBP7MwMYepy5h7iFfDGFhb2_KOnB10RDCnshCyzywAKSPjsAkqQ28UhDwfWp6EFdRHHXsfjgL3kM6Kx9V7PPgNoVTQYXMgdCqiFZIhCGyi2W8L7Iw7A6KQqhjo\",\"token\":{\"id\":\"7e022384ce79d27715bd7a80932893850f0c8fa4e6bd01a97e88316821199d097db4dfe119db5875\",\"user_id\":9,\"client_id\":1,\"name\":\"socialLoginToken\",\"scopes\":[],\"revoked\":false,\"created_at\":\"2017-10-16 01:31:51\",\"updated_at\":\"2017-10-16 01:31:51\",\"expires_at\":\"2018-10-16 01:31:51\"}}"
 				}
 			]
@@ -817,7 +817,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"name\": \"Nuevo nombre\",\n\t\"members\": [\n\t\t1,\n\t\t5,\n\t\t6\n\t\t]\n}\n"
+					"raw": "{\n  \"name\": \"Nuevo nombre\",\n  \"members\": [\n    1,\n    5,\n    6\n    ]\n}\n"
 				},
 				"description": "Update group name and members. The members are required."
 			},
@@ -865,7 +865,7 @@
 			},
 			"response": [
 				{
-					"id": "349535b9-80d1-4b6d-843a-c57be6b00115",
+					"id": "147dd2d7-c929-4d3b-91d7-56e13460d92a",
 					"name": "Search products by name",
 					"originalRequest": {
 						"url": {
@@ -915,69 +915,69 @@
 							"name": "cache-control",
 							"key": "cache-control",
 							"value": "no-cache, private",
-							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+							"description": ""
 						},
 						{
 							"name": "connection",
 							"key": "connection",
 							"value": "keep-alive",
-							"description": "Options that are desired for the connection"
+							"description": ""
 						},
 						{
 							"name": "content-encoding",
 							"key": "content-encoding",
 							"value": "gzip",
-							"description": "The type of encoding used on the data."
+							"description": ""
 						},
 						{
 							"name": "content-type",
 							"key": "content-type",
 							"value": "application/json",
-							"description": "The mime type of this content"
+							"description": ""
 						},
 						{
 							"name": "date",
 							"key": "date",
 							"value": "Tue, 10 Oct 2017 21:45:09 GMT",
-							"description": "The date and time that the message was sent"
+							"description": ""
 						},
 						{
 							"name": "server",
 							"key": "server",
 							"value": "nginx/1.10.3 (Ubuntu)",
-							"description": "A name for the server"
+							"description": ""
 						},
 						{
 							"name": "transfer-encoding",
 							"key": "transfer-encoding",
 							"value": "chunked",
-							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+							"description": ""
 						},
 						{
 							"name": "vary",
 							"key": "vary",
 							"value": "Accept-Encoding",
-							"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+							"description": ""
 						},
 						{
 							"name": "x-ratelimit-limit",
 							"key": "x-ratelimit-limit",
 							"value": "60",
-							"description": "Custom header"
+							"description": ""
 						},
 						{
 							"name": "x-ratelimit-remaining",
 							"key": "x-ratelimit-remaining",
 							"value": "59",
-							"description": "Custom header"
+							"description": ""
 						}
 					],
 					"cookie": [],
-					"responseTime": 72,
+					"responseTime": "72",
 					"body": "[{\"id\":2,\"name\":\"Leche Cart\\u00f3n La Serenisima\",\"price\":\"13.50\",\"category_id\":1,\"created_at\":\"2017-10-10 21:02:29\",\"updated_at\":\"2017-10-10 21:02:29\",\"deleted_at\":null}]"
 				},
 				{
-					"id": "70a1a057-a181-49d9-8668-f35e831086d2",
+					"id": "8c1ee817-5321-4b4b-bda6-4974259e989c",
 					"name": "Search model without filters returns all products",
 					"originalRequest": {
 						"url": "http://{{host}}/api/search/products",
@@ -1007,65 +1007,65 @@
 							"name": "cache-control",
 							"key": "cache-control",
 							"value": "no-cache, private",
-							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+							"description": ""
 						},
 						{
 							"name": "connection",
 							"key": "connection",
 							"value": "keep-alive",
-							"description": "Options that are desired for the connection"
+							"description": ""
 						},
 						{
 							"name": "content-encoding",
 							"key": "content-encoding",
 							"value": "gzip",
-							"description": "The type of encoding used on the data."
+							"description": ""
 						},
 						{
 							"name": "content-type",
 							"key": "content-type",
 							"value": "application/json",
-							"description": "The mime type of this content"
+							"description": ""
 						},
 						{
 							"name": "date",
 							"key": "date",
 							"value": "Tue, 10 Oct 2017 21:46:27 GMT",
-							"description": "The date and time that the message was sent"
+							"description": ""
 						},
 						{
 							"name": "server",
 							"key": "server",
 							"value": "nginx/1.10.3 (Ubuntu)",
-							"description": "A name for the server"
+							"description": ""
 						},
 						{
 							"name": "transfer-encoding",
 							"key": "transfer-encoding",
 							"value": "chunked",
-							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+							"description": ""
 						},
 						{
 							"name": "vary",
 							"key": "vary",
 							"value": "Accept-Encoding",
-							"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+							"description": ""
 						},
 						{
 							"name": "x-ratelimit-limit",
 							"key": "x-ratelimit-limit",
 							"value": "60",
-							"description": "Custom header"
+							"description": ""
 						},
 						{
 							"name": "x-ratelimit-remaining",
 							"key": "x-ratelimit-remaining",
 							"value": "59",
-							"description": "Custom header"
+							"description": ""
 						}
 					],
 					"cookie": [],
-					"responseTime": 75,
+					"responseTime": "75",
 					"body": "[{\"id\":1,\"name\":\"Coca-Cola 3lt.\",\"price\":\"50.00\",\"category_id\":3,\"created_at\":\"2017-10-10 21:02:29\",\"updated_at\":\"2017-10-10 21:02:29\",\"deleted_at\":null},{\"id\":2,\"name\":\"Leche Cart\\u00f3n La Serenisima\",\"price\":\"13.50\",\"category_id\":1,\"created_at\":\"2017-10-10 21:02:29\",\"updated_at\":\"2017-10-10 21:02:29\",\"deleted_at\":null},{\"id\":3,\"name\":\"TV Samsung 40''\",\"price\":\"50.00\",\"category_id\":2,\"created_at\":\"2017-10-10 21:02:29\",\"updated_at\":\"2017-10-10 21:02:29\",\"deleted_at\":null},{\"id\":4,\"name\":\"Short Nike\",\"price\":\"520.00\",\"category_id\":4,\"created_at\":\"2017-10-10 21:02:29\",\"updated_at\":\"2017-10-10 21:02:29\",\"deleted_at\":null},{\"id\":5,\"name\":\"Matarazzo Coditos\",\"price\":\"27.50\",\"category_id\":5,\"created_at\":\"2017-10-10 21:02:29\",\"updated_at\":\"2017-10-10 21:02:29\",\"deleted_at\":null}]"
 				}
 			]
@@ -1160,7 +1160,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"name\": \"Compras\",\n\t\"products\": [\n\t\t{\n\t\t\t\"id\" : 1,\n\t\t\t\"count\": 3\n\t\t}\n\t]\n}"
+					"raw": "{\n  \"name\": \"Compras\",\n  \"products\": [\n    {\n      \"id\" : 1,\n      \"count\": 3\n    }\n  ]\n}"
 				},
 				"description": ""
 			},
@@ -1190,7 +1190,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"name\": \"Editado\",\n\t\"products\": [\n\t\t{\n\t\t\t\"id\" : 100,\n\t\t\t\"count\": 3\n\t\t}\n\t]\n}"
+					"raw": "{\n  \"name\": \"Editado\",\n  \"products\": [\n    {\n      \"id\" : 100,\n      \"count\": 3\n    }\n  ]\n}"
 				},
 				"description": ""
 			},
@@ -1201,6 +1201,59 @@
 			"request": {
 				"url": "http://{{host}}/api/groups/3/lists/13",
 				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImNlZmEwNjczN2ZmYjMwZGU4OWQyMmNlYjA1YWM2NTE5NTU5MzA4MzA4NGM4YmI4YjhjNWEzYzE4YTIwZmIzNmE3YzJkMDIwZTNkZWYxZDkyIn0.eyJhdWQiOiIyIiwianRpIjoiY2VmYTA2NzM3ZmZiMzBkZTg5ZDIyY2ViMDVhYzY1MTk1NTkzMDgzMDg0YzhiYjhiOGM1YTNjMThhMjBmYjM2YTdjMmQwMjBlM2RlZjFkOTIiLCJpYXQiOjE1MDczNTc0MTMsIm5iZiI6MTUwNzM1NzQxMywiZXhwIjoxNTM4ODkzNDEzLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.TgRk9aJcIHluXPQLg0_g39HgtvdWBrB0th3ghRmlYIEIrwU37pDj94TNeCOJKhmYBqvZ0YIhx8dVppe1WFnLD9YPe9Rrso60F1tVBo1pp0yzQddl1aMs6t9zWkmedW50IlP5KGf98z5UCvBMpJriEDq3VbUg_i5P_KQa3CB_UtIey2ZSyzFqjb2irqrQKrceq9OLVMrGR_bkoV8IXg6lxr2Dt4p9SNYvvggz1dpSMBBh8v1sqF0kreDfRCwkCwuEP4vLTduXpvFVZdUJH_FhOsTpDINJ8_RYX8VURe2x0A2VMxnjJ8NxhdU1XT06drIiJ5RVkwI8LaS4-PZotk1ygukIXzyDBpK8gmvoLb8Tnun5sGFBi6tYpgj0fNdBDCfJMPg_3xmJBtA4LNdW6B65kAZt9JjGaITXPDlh2WBAefusuWsoQ5CIMONuA12vzpNoAfirO0EnlvoLiqwzcruipMeeO3dzN1tZ_Ir1Ai2VNaS7xcYeBJ6nGT_mVKnRKWoAbmxn52p88RoawH0-vxnsR-1zWB9QRAvu7Ceoasmm-TJWrH7Ih0VEtrKLICuyUKkJM8Hu3UwKhWNAvbfplwUXZud0IdxHwc6y5mzQkUtD8z4uC0qxlGuv4G3Yoab7zAESXZQnKUNKiE8arw5WcaH3I61jIgdu5c7s7X2m23ahZwA",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Store a purchase",
+			"request": {
+				"url": "http://{{host}}/api/purchases",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": "",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImNlZmEwNjczN2ZmYjMwZGU4OWQyMmNlYjA1YWM2NTE5NTU5MzA4MzA4NGM4YmI4YjhjNWEzYzE4YTIwZmIzNmE3YzJkMDIwZTNkZWYxZDkyIn0.eyJhdWQiOiIyIiwianRpIjoiY2VmYTA2NzM3ZmZiMzBkZTg5ZDIyY2ViMDVhYzY1MTk1NTkzMDgzMDg0YzhiYjhiOGM1YTNjMThhMjBmYjM2YTdjMmQwMjBlM2RlZjFkOTIiLCJpYXQiOjE1MDczNTc0MTMsIm5iZiI6MTUwNzM1NzQxMywiZXhwIjoxNTM4ODkzNDEzLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.TgRk9aJcIHluXPQLg0_g39HgtvdWBrB0th3ghRmlYIEIrwU37pDj94TNeCOJKhmYBqvZ0YIhx8dVppe1WFnLD9YPe9Rrso60F1tVBo1pp0yzQddl1aMs6t9zWkmedW50IlP5KGf98z5UCvBMpJriEDq3VbUg_i5P_KQa3CB_UtIey2ZSyzFqjb2irqrQKrceq9OLVMrGR_bkoV8IXg6lxr2Dt4p9SNYvvggz1dpSMBBh8v1sqF0kreDfRCwkCwuEP4vLTduXpvFVZdUJH_FhOsTpDINJ8_RYX8VURe2x0A2VMxnjJ8NxhdU1XT06drIiJ5RVkwI8LaS4-PZotk1ygukIXzyDBpK8gmvoLb8Tnun5sGFBi6tYpgj0fNdBDCfJMPg_3xmJBtA4LNdW6B65kAZt9JjGaITXPDlh2WBAefusuWsoQ5CIMONuA12vzpNoAfirO0EnlvoLiqwzcruipMeeO3dzN1tZ_Ir1Ai2VNaS7xcYeBJ6nGT_mVKnRKWoAbmxn52p88RoawH0-vxnsR-1zWB9QRAvu7Ceoasmm-TJWrH7Ih0VEtrKLICuyUKkJM8Hu3UwKhWNAvbfplwUXZud0IdxHwc6y5mzQkUtD8z4uC0qxlGuv4G3Yoab7zAESXZQnKUNKiE8arw5WcaH3I61jIgdu5c7s7X2m23ahZwA",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"products\": [\n    {\n      \"id\" : \"1\",\n      \"count\": 3\n    }\n  ]\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Show a group's purchase",
+			"request": {
+				"url": "http://{{host}}/api/groups/4/purchases/11",
+				"method": "GET",
 				"header": [
 					{
 						"key": "Accept",
