@@ -39,4 +39,12 @@ class Group extends Model
     {
         return $this->hasMany(PurchaseList::class);
     }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function purchases()
+    {
+        return $this->hasMany(Purchase::class);
+    }
 }
