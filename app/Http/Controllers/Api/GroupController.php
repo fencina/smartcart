@@ -12,7 +12,7 @@ class GroupController extends Controller
 {
     public function index()
     {
-        return response()->json(Auth::user()->groups);
+        return response()->json(Auth::user()->groups->load('clients'));
     }
 
     public function store(GroupFormRequest $request)
