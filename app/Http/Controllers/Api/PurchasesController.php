@@ -2,55 +2,62 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Group;
+use App\Http\Requests\PurchaseFormRequest;
 use App\Product;
 use App\Purchase;
 use App\Status;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 class PurchasesController extends Controller
 {
 
     /**
-     * Store a newly created resource in storage.http://{{host}}/api/search/groups?personal=0
+     * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(PurchaseFormRequest $request)
     {
         $purchase = new Purchase();
 
-        $pendingStatus = Status::pending();
-        $purchase->status()->associate($pendingStatus);
+        $purchase->status()->associate(Status::pending());
 
         $products = Product::whereIn('id', $request->input('products'))->get();
-        $purchase->amounts = $products->sum->price;
+        $requestedProducts = collect($request->input('products'));
+
+        $purchase->amounts = $products->sum( function ($product) use ($requestedProducts) {
+            return $product->price * $requestedProducts->where('id', $product->id)->first()['count'];
+        });
 
         $purchase->save();
 
-        if ($request->has('product')) {
-            $purchase->products()->attach($request->input('product'));
-        }
+        $products = $requestedProducts->mapWithKeys(function ($product) {
+            return [$product['id'] => ['count' => $product['count']]];
+        })->toArray();
+
+        $purchase->products()->attach($products);
 
         return response()->json($purchase->load('products'));
     }
 
     /**
-     * Display the specified resource.
+     *  Display the specified resource.
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param Purchase $purchase
+     * @return \Illuminate\Http\JsonResponse
      */
-    public function show($id)
+    public function show(Group $group, Purchase $purchase)
     {
-        return Purchase::find($id);
+        if (!Auth::user()->groups->contains($group)) {
+            throw (new ModelNotFoundException())->setModel(Group::class);
+        }
+
+        return response()->json($group->purchases()->where('id', $purchase->id)->first());
     }
 
-    public function update(Request $request, Purchase $purchase)
-    {
-        $purchase->update($request->all());
-
-        return response()->json($purchase, 200);
-    }
 }
