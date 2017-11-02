@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Events\PurchaseCreated;
 use App\Group;
 use App\Http\Requests\PurchaseFormRequest;
 use App\Product;
@@ -18,8 +19,8 @@ class PurchasesController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request $request
-     * @return \Illuminate\Http\Response
+     * @param PurchaseFormRequest $request
+     * @return \Illuminate\Http\JsonResponse
      */
     public function store(PurchaseFormRequest $request)
     {
@@ -27,11 +28,11 @@ class PurchasesController extends Controller
 
         $purchase->status()->associate(Status::pending());
 
-        $products = Product::whereIn('id', $request->input('products'))->get();
         $requestedProducts = collect($request->input('products'));
+        $products = Product::whereIn('id', $requestedProducts->pluck('id'))->get();
 
         $purchase->amounts = $products->sum( function ($product) use ($requestedProducts) {
-            return $product->price * $requestedProducts->where('epc', $product->epc)->first()['count'];
+            return $product->price * $requestedProducts->where('id', $product->id)->first()['count'];
         });
 
         $purchase->save();
@@ -41,6 +42,8 @@ class PurchasesController extends Controller
         })->toArray();
 
         $purchase->products()->attach($products);
+
+        event(new PurchaseCreated());
 
         return response()->json($purchase->load('products'));
     }
@@ -58,7 +61,6 @@ class PurchasesController extends Controller
         $purchase->status()->associate(Status::pending());
 
         $requestedProducts = collect($request->input('products'));
-
         $products = Product::whereIn('epc', $requestedProducts->pluck('epc'))->get();
         $count = 1;
 
@@ -74,6 +76,8 @@ class PurchasesController extends Controller
         })->toArray();
 
         $purchase->products()->attach($products);
+
+        event(new PurchaseCreated());
 
         return response()->json($purchase->load('products'));
     }
