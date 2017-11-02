@@ -11,6 +11,6 @@
 |
 */
 
-Broadcast::channel('App.User.{id}', function ($user, $id) {
-    return (int) $user->id === (int) $id;
+Broadcast::channel('new-purchase', function ($user) {
+    return $user->hasRole(\App\Role::CASHIER) OR $user->hasRole(\App\Role::SUPER_ADMIN);
 });
