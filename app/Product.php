@@ -26,4 +26,12 @@ class Product extends Model
     {
         return $this->belongsTo(ProductCategory::class);
     }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function purchases()
+    {
+        return $this->belongsToMany(Purchase::class)->withPivot('count');
+    }
 }
