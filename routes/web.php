@@ -37,8 +37,9 @@ Route::middleware(['auth'])->group( function () {
     });
 
 
-    Route::middleware(['role:' . \App\Role::ADMIN_USERS]);
-    Route::resource('compras', 'CompraController');
+    Route::middleware(['role:' . \App\Role::CASHIER])->group( function () {
+        Route::resource('purchases', 'PurchaseController');
+    });
 
     Route::middleware(['role:' . \App\Role::ADMIN_PUSH])->group( function () {
         Route::get('notifications', 'NotificationController@index')->name('notifications.index');
@@ -47,5 +48,3 @@ Route::middleware(['auth'])->group( function () {
     });
 
 });
-
-Route::resource('compras', 'CompraController');
