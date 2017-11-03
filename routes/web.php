@@ -38,7 +38,8 @@ Route::middleware(['auth'])->group( function () {
 
 
     Route::middleware(['role:' . \App\Role::CASHIER])->group( function () {
-        Route::resource('purchases', 'PurchaseController');
+        Route::resource('purchases', 'PurchaseController', ['only' => ['index']]);
+        Route::post('purchases/{purchase}/confirm', ['as' => 'purchases.confirm', 'uses' => 'PurchaseController@confirm']);
     });
 
     Route::middleware(['role:' . \App\Role::ADMIN_PUSH])->group( function () {
