@@ -19,6 +19,7 @@ Route::post('/facebookLogin', 'LoginController@facebookLogin');
 Route::post('/googleLogin', 'LoginController@googleLogin');
 
 Route::post('reader/purchases', ['uses' => 'PurchasesController@storeFromReader']);
+Route::get('reader/purchases/pending', ['uses' => 'PurchasesController@pendingPurchase']);
 
 Route::middleware(['auth:api'])->group( function () {
     Route::resource('groups', 'GroupController', ['except' => ['create', 'edit', 'delete']]);

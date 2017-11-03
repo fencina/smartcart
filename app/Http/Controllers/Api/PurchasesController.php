@@ -83,6 +83,16 @@ class PurchasesController extends Controller
     }
 
     /**
+     * Return latest pending purchase if any
+     *
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function pendingPurchase()
+    {
+        return response()->json(Purchase::pending()->latest()->first());
+    }
+
+    /**
      *  Display the specified resource.
      *
      * @param Purchase $purchase
