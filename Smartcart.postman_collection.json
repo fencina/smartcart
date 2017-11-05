@@ -32,7 +32,7 @@
 			},
 			"response": [
 				{
-					"id": "3f6f24ce-94df-47a9-88e5-a4b771a6666c",
+					"id": "dd4a9129-b16a-4169-9486-56b39b2e26b9",
 					"name": "Register client with missing params",
 					"originalRequest": {
 						"url": "http://{{host}}/api/register",
@@ -115,7 +115,7 @@
 					"body": "{\"error\":\"ValidationException\",\"data\":{\"name\":[\"The name field is required.\"],\"last_name\":[\"The last name field is required.\"],\"email\":[\"The email field is required.\"],\"password\":[\"The password field is required.\"]}}"
 				},
 				{
-					"id": "590b3704-db36-4ebb-9f71-eb4fb2c5617f",
+					"id": "82ec70a0-18e5-47c8-88bf-de14f459abae",
 					"name": "Register client successfully",
 					"originalRequest": {
 						"url": "http://{{host}}/api/register",
@@ -231,7 +231,7 @@
 			},
 			"response": [
 				{
-					"id": "44e49f6d-ba95-47a8-badb-b6517a45c537",
+					"id": "2d3f2a0e-fd6f-46cc-8183-4daf9532d5e2",
 					"name": "Login client with invalid credentials",
 					"originalRequest": {
 						"url": "http://{{host}}/api/login",
@@ -314,7 +314,7 @@
 					"body": "{\"error\":\"Client error: `POST http:\\/\\/smartcart.dev\\/oauth\\/token` resulted in a `401 Unauthorized` response:\\n{\\\"error\\\":\\\"invalid_credentials\\\",\\\"message\\\":\\\"The user credentials were incorrect.\\\"}\\n\"}"
 				},
 				{
-					"id": "9ef667ec-86b6-492b-96ad-4e00c55dc02d",
+					"id": "30ede06a-fb0c-4e5d-9081-add48f814645",
 					"name": "Login client with missing param",
 					"originalRequest": {
 						"url": "http://{{host}}/api/login",
@@ -397,7 +397,7 @@
 					"body": "{\"error\":\"ValidationException\",\"data\":{\"password\":[\"The password field is required.\"]}}"
 				},
 				{
-					"id": "b4621620-8b43-4418-8d61-b0432c917dd3",
+					"id": "ec8bd08f-ff12-49b9-8a4c-0c2680d27aa8",
 					"name": "Login client successfully",
 					"originalRequest": {
 						"url": "http://{{host}}/api/login",
@@ -513,7 +513,7 @@
 			},
 			"response": [
 				{
-					"id": "9781f0f3-59d6-421d-aedd-825d001383c9",
+					"id": "7739bbd0-7d44-487b-a4c0-b521cc771c20",
 					"name": "Facebook Login Successfully",
 					"originalRequest": {
 						"url": "http://{{host}}/api/facebookLogin",
@@ -633,7 +633,7 @@
 			},
 			"response": [
 				{
-					"id": "89199cc2-c201-4434-8bd8-fe12629d2acb",
+					"id": "ffe519b5-9e70-44c8-a201-089c4ba02e79",
 					"name": "Google Login Successfully",
 					"originalRequest": {
 						"url": "http://{{host}}/api/googleLogin",
@@ -865,7 +865,7 @@
 			},
 			"response": [
 				{
-					"id": "147dd2d7-c929-4d3b-91d7-56e13460d92a",
+					"id": "07e2d0a0-ef76-425b-a9aa-b465074215aa",
 					"name": "Search products by name",
 					"originalRequest": {
 						"url": {
@@ -977,7 +977,7 @@
 					"body": "[{\"id\":2,\"name\":\"Leche Cart\\u00f3n La Serenisima\",\"price\":\"13.50\",\"category_id\":1,\"created_at\":\"2017-10-10 21:02:29\",\"updated_at\":\"2017-10-10 21:02:29\",\"deleted_at\":null}]"
 				},
 				{
-					"id": "8c1ee817-5321-4b4b-bda6-4974259e989c",
+					"id": "f9a28df4-55e7-4cce-8676-fb704d243866",
 					"name": "Search model without filters returns all products",
 					"originalRequest": {
 						"url": "http://{{host}}/api/search/products",
@@ -1243,7 +1243,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"products\": [\n    {\n      \"id\" : \"1\",\n      \"count\": 3\n    }\n  ]\n}"
+					"raw": "{\n  \"products\": [\n    {\n      \"id\" : 1,\n      \"count\": 3\n    },\n    {\n    \t\"id\": 2,\n    \t\"count\": 2\n    },\n    {\n    \t\"id\": 5,\n    \t\"count\": 1\n    }\n  ]\n}"
 				},
 				"description": ""
 			},
@@ -1270,6 +1270,236 @@
 				"description": ""
 			},
 			"response": []
+		},
+		{
+			"name": "Get group's purchases",
+			"request": {
+				"url": "http://{{host}}/api/groups/4/purchases",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImNlZmEwNjczN2ZmYjMwZGU4OWQyMmNlYjA1YWM2NTE5NTU5MzA4MzA4NGM4YmI4YjhjNWEzYzE4YTIwZmIzNmE3YzJkMDIwZTNkZWYxZDkyIn0.eyJhdWQiOiIyIiwianRpIjoiY2VmYTA2NzM3ZmZiMzBkZTg5ZDIyY2ViMDVhYzY1MTk1NTkzMDgzMDg0YzhiYjhiOGM1YTNjMThhMjBmYjM2YTdjMmQwMjBlM2RlZjFkOTIiLCJpYXQiOjE1MDczNTc0MTMsIm5iZiI6MTUwNzM1NzQxMywiZXhwIjoxNTM4ODkzNDEzLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.TgRk9aJcIHluXPQLg0_g39HgtvdWBrB0th3ghRmlYIEIrwU37pDj94TNeCOJKhmYBqvZ0YIhx8dVppe1WFnLD9YPe9Rrso60F1tVBo1pp0yzQddl1aMs6t9zWkmedW50IlP5KGf98z5UCvBMpJriEDq3VbUg_i5P_KQa3CB_UtIey2ZSyzFqjb2irqrQKrceq9OLVMrGR_bkoV8IXg6lxr2Dt4p9SNYvvggz1dpSMBBh8v1sqF0kreDfRCwkCwuEP4vLTduXpvFVZdUJH_FhOsTpDINJ8_RYX8VURe2x0A2VMxnjJ8NxhdU1XT06drIiJ5RVkwI8LaS4-PZotk1ygukIXzyDBpK8gmvoLb8Tnun5sGFBi6tYpgj0fNdBDCfJMPg_3xmJBtA4LNdW6B65kAZt9JjGaITXPDlh2WBAefusuWsoQ5CIMONuA12vzpNoAfirO0EnlvoLiqwzcruipMeeO3dzN1tZ_Ir1Ai2VNaS7xcYeBJ6nGT_mVKnRKWoAbmxn52p88RoawH0-vxnsR-1zWB9QRAvu7Ceoasmm-TJWrH7Ih0VEtrKLICuyUKkJM8Hu3UwKhWNAvbfplwUXZud0IdxHwc6y5mzQkUtD8z4uC0qxlGuv4G3Yoab7zAESXZQnKUNKiE8arw5WcaH3I61jIgdu5c7s7X2m23ahZwA",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "cad9dd40-15aa-41d1-9213-50d8e9d7054a",
+					"name": "Get group's purchases with products",
+					"originalRequest": {
+						"url": "http://{{host}}/api/groups/4/purchases",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": "",
+								"warning": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImNlZmEwNjczN2ZmYjMwZGU4OWQyMmNlYjA1YWM2NTE5NTU5MzA4MzA4NGM4YmI4YjhjNWEzYzE4YTIwZmIzNmE3YzJkMDIwZTNkZWYxZDkyIn0.eyJhdWQiOiIyIiwianRpIjoiY2VmYTA2NzM3ZmZiMzBkZTg5ZDIyY2ViMDVhYzY1MTk1NTkzMDgzMDg0YzhiYjhiOGM1YTNjMThhMjBmYjM2YTdjMmQwMjBlM2RlZjFkOTIiLCJpYXQiOjE1MDczNTc0MTMsIm5iZiI6MTUwNzM1NzQxMywiZXhwIjoxNTM4ODkzNDEzLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.TgRk9aJcIHluXPQLg0_g39HgtvdWBrB0th3ghRmlYIEIrwU37pDj94TNeCOJKhmYBqvZ0YIhx8dVppe1WFnLD9YPe9Rrso60F1tVBo1pp0yzQddl1aMs6t9zWkmedW50IlP5KGf98z5UCvBMpJriEDq3VbUg_i5P_KQa3CB_UtIey2ZSyzFqjb2irqrQKrceq9OLVMrGR_bkoV8IXg6lxr2Dt4p9SNYvvggz1dpSMBBh8v1sqF0kreDfRCwkCwuEP4vLTduXpvFVZdUJH_FhOsTpDINJ8_RYX8VURe2x0A2VMxnjJ8NxhdU1XT06drIiJ5RVkwI8LaS4-PZotk1ygukIXzyDBpK8gmvoLb8Tnun5sGFBi6tYpgj0fNdBDCfJMPg_3xmJBtA4LNdW6B65kAZt9JjGaITXPDlh2WBAefusuWsoQ5CIMONuA12vzpNoAfirO0EnlvoLiqwzcruipMeeO3dzN1tZ_Ir1Ai2VNaS7xcYeBJ6nGT_mVKnRKWoAbmxn52p88RoawH0-vxnsR-1zWB9QRAvu7Ceoasmm-TJWrH7Ih0VEtrKLICuyUKkJM8Hu3UwKhWNAvbfplwUXZud0IdxHwc6y5mzQkUtD8z4uC0qxlGuv4G3Yoab7zAESXZQnKUNKiE8arw5WcaH3I61jIgdu5c7s7X2m23ahZwA",
+								"description": "",
+								"warning": ""
+							}
+						],
+						"body": {}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"name": "cache-control",
+							"key": "cache-control",
+							"value": "no-cache, private",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"name": "connection",
+							"key": "connection",
+							"value": "keep-alive",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "content-encoding",
+							"key": "content-encoding",
+							"value": "gzip",
+							"description": "The type of encoding used on the data."
+						},
+						{
+							"name": "content-type",
+							"key": "content-type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "date",
+							"key": "date",
+							"value": "Sat, 04 Nov 2017 18:41:57 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "server",
+							"key": "server",
+							"value": "nginx/1.10.3 (Ubuntu)",
+							"description": "A name for the server"
+						},
+						{
+							"name": "transfer-encoding",
+							"key": "transfer-encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"name": "vary",
+							"key": "vary",
+							"value": "Accept-Encoding",
+							"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+						},
+						{
+							"name": "x-ratelimit-limit",
+							"key": "x-ratelimit-limit",
+							"value": "60",
+							"description": "Custom header"
+						},
+						{
+							"name": "x-ratelimit-remaining",
+							"key": "x-ratelimit-remaining",
+							"value": "58",
+							"description": "Custom header"
+						}
+					],
+					"cookie": [],
+					"responseTime": 38,
+					"body": "[{\"id\":60,\"group_id\":4,\"created_at\":\"2017-11-03 00:04:52\",\"updated_at\":\"2017-11-03 00:18:43\",\"status_id\":2,\"amounts\":\"204.50\",\"products\":[{\"id\":1,\"epc\":\"e2 00 51 69 65 0e 01 81 15 50 7a 74\",\"name\":\"Coca-Cola 3lt.\",\"price\":\"50.00\",\"category_id\":3,\"created_at\":\"2017-10-10 21:02:29\",\"updated_at\":\"2017-10-29 21:00:50\",\"deleted_at\":null,\"pivot\":{\"purchase_id\":60,\"product_id\":1,\"count\":3}},{\"id\":2,\"epc\":\"e2 00 51 80 00 08 02 35 15 40 7b 3b\",\"name\":\"Leche Cart\\u00f3n La Serenisima\",\"price\":\"13.50\",\"category_id\":1,\"created_at\":\"2017-10-10 21:02:29\",\"updated_at\":\"2017-10-29 21:04:47\",\"deleted_at\":null,\"pivot\":{\"purchase_id\":60,\"product_id\":2,\"count\":2}},{\"id\":5,\"epc\":\"e2 00 00 16 01 02 02 31 09 50 b9 75\",\"name\":\"Matarazzo Coditos\",\"price\":\"27.50\",\"category_id\":5,\"created_at\":\"2017-10-10 21:02:29\",\"updated_at\":\"2017-10-29 21:04:47\",\"deleted_at\":null,\"pivot\":{\"purchase_id\":60,\"product_id\":5,\"count\":1}}]}]"
+				}
+			]
+		},
+		{
+			"name": "Associate purchase to group",
+			"request": {
+				"url": "http://{{host}}/api/groups/4/purchases/65/associate",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImNlZmEwNjczN2ZmYjMwZGU4OWQyMmNlYjA1YWM2NTE5NTU5MzA4MzA4NGM4YmI4YjhjNWEzYzE4YTIwZmIzNmE3YzJkMDIwZTNkZWYxZDkyIn0.eyJhdWQiOiIyIiwianRpIjoiY2VmYTA2NzM3ZmZiMzBkZTg5ZDIyY2ViMDVhYzY1MTk1NTkzMDgzMDg0YzhiYjhiOGM1YTNjMThhMjBmYjM2YTdjMmQwMjBlM2RlZjFkOTIiLCJpYXQiOjE1MDczNTc0MTMsIm5iZiI6MTUwNzM1NzQxMywiZXhwIjoxNTM4ODkzNDEzLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.TgRk9aJcIHluXPQLg0_g39HgtvdWBrB0th3ghRmlYIEIrwU37pDj94TNeCOJKhmYBqvZ0YIhx8dVppe1WFnLD9YPe9Rrso60F1tVBo1pp0yzQddl1aMs6t9zWkmedW50IlP5KGf98z5UCvBMpJriEDq3VbUg_i5P_KQa3CB_UtIey2ZSyzFqjb2irqrQKrceq9OLVMrGR_bkoV8IXg6lxr2Dt4p9SNYvvggz1dpSMBBh8v1sqF0kreDfRCwkCwuEP4vLTduXpvFVZdUJH_FhOsTpDINJ8_RYX8VURe2x0A2VMxnjJ8NxhdU1XT06drIiJ5RVkwI8LaS4-PZotk1ygukIXzyDBpK8gmvoLb8Tnun5sGFBi6tYpgj0fNdBDCfJMPg_3xmJBtA4LNdW6B65kAZt9JjGaITXPDlh2WBAefusuWsoQ5CIMONuA12vzpNoAfirO0EnlvoLiqwzcruipMeeO3dzN1tZ_Ir1Ai2VNaS7xcYeBJ6nGT_mVKnRKWoAbmxn52p88RoawH0-vxnsR-1zWB9QRAvu7Ceoasmm-TJWrH7Ih0VEtrKLICuyUKkJM8Hu3UwKhWNAvbfplwUXZud0IdxHwc6y5mzQkUtD8z4uC0qxlGuv4G3Yoab7zAESXZQnKUNKiE8arw5WcaH3I61jIgdu5c7s7X2m23ahZwA",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "c01ecc12-71a5-42d3-b09c-e4f1642c3227",
+					"name": "Associate purchase to group successfully",
+					"originalRequest": {
+						"url": "http://{{host}}/api/groups/4/purchases/65/associate",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": "",
+								"warning": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImNlZmEwNjczN2ZmYjMwZGU4OWQyMmNlYjA1YWM2NTE5NTU5MzA4MzA4NGM4YmI4YjhjNWEzYzE4YTIwZmIzNmE3YzJkMDIwZTNkZWYxZDkyIn0.eyJhdWQiOiIyIiwianRpIjoiY2VmYTA2NzM3ZmZiMzBkZTg5ZDIyY2ViMDVhYzY1MTk1NTkzMDgzMDg0YzhiYjhiOGM1YTNjMThhMjBmYjM2YTdjMmQwMjBlM2RlZjFkOTIiLCJpYXQiOjE1MDczNTc0MTMsIm5iZiI6MTUwNzM1NzQxMywiZXhwIjoxNTM4ODkzNDEzLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.TgRk9aJcIHluXPQLg0_g39HgtvdWBrB0th3ghRmlYIEIrwU37pDj94TNeCOJKhmYBqvZ0YIhx8dVppe1WFnLD9YPe9Rrso60F1tVBo1pp0yzQddl1aMs6t9zWkmedW50IlP5KGf98z5UCvBMpJriEDq3VbUg_i5P_KQa3CB_UtIey2ZSyzFqjb2irqrQKrceq9OLVMrGR_bkoV8IXg6lxr2Dt4p9SNYvvggz1dpSMBBh8v1sqF0kreDfRCwkCwuEP4vLTduXpvFVZdUJH_FhOsTpDINJ8_RYX8VURe2x0A2VMxnjJ8NxhdU1XT06drIiJ5RVkwI8LaS4-PZotk1ygukIXzyDBpK8gmvoLb8Tnun5sGFBi6tYpgj0fNdBDCfJMPg_3xmJBtA4LNdW6B65kAZt9JjGaITXPDlh2WBAefusuWsoQ5CIMONuA12vzpNoAfirO0EnlvoLiqwzcruipMeeO3dzN1tZ_Ir1Ai2VNaS7xcYeBJ6nGT_mVKnRKWoAbmxn52p88RoawH0-vxnsR-1zWB9QRAvu7Ceoasmm-TJWrH7Ih0VEtrKLICuyUKkJM8Hu3UwKhWNAvbfplwUXZud0IdxHwc6y5mzQkUtD8z4uC0qxlGuv4G3Yoab7zAESXZQnKUNKiE8arw5WcaH3I61jIgdu5c7s7X2m23ahZwA",
+								"description": "",
+								"warning": ""
+							}
+						],
+						"body": {}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"name": "cache-control",
+							"key": "cache-control",
+							"value": "no-cache, private",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"name": "connection",
+							"key": "connection",
+							"value": "keep-alive",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "content-encoding",
+							"key": "content-encoding",
+							"value": "gzip",
+							"description": "The type of encoding used on the data."
+						},
+						{
+							"name": "content-type",
+							"key": "content-type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "date",
+							"key": "date",
+							"value": "Sun, 05 Nov 2017 01:48:47 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "server",
+							"key": "server",
+							"value": "nginx/1.10.3 (Ubuntu)",
+							"description": "A name for the server"
+						},
+						{
+							"name": "transfer-encoding",
+							"key": "transfer-encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"name": "vary",
+							"key": "vary",
+							"value": "Accept-Encoding",
+							"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+						},
+						{
+							"name": "x-ratelimit-limit",
+							"key": "x-ratelimit-limit",
+							"value": "60",
+							"description": "Custom header"
+						},
+						{
+							"name": "x-ratelimit-remaining",
+							"key": "x-ratelimit-remaining",
+							"value": "58",
+							"description": "Custom header"
+						}
+					],
+					"cookie": [],
+					"responseTime": 830,
+					"body": "{\"id\":65,\"group_id\":4,\"created_at\":\"2017-11-04 20:33:05\",\"updated_at\":\"2017-11-04 20:33:37\",\"status_id\":2,\"amounts\":\"204.50\",\"group\":{\"id\":4,\"name\":\"Trabajo\",\"personal\":0,\"created_at\":\"2017-10-07 06:30:07\",\"updated_at\":\"2017-10-07 06:30:07\",\"deleted_at\":null},\"products\":[{\"id\":1,\"epc\":\"e2 00 51 69 65 0e 01 81 15 50 7a 74\",\"name\":\"Coca-Cola 3lt.\",\"price\":\"50.00\",\"category_id\":3,\"created_at\":\"2017-10-10 21:02:29\",\"updated_at\":\"2017-10-29 21:00:50\",\"deleted_at\":null,\"pivot\":{\"purchase_id\":65,\"product_id\":1,\"count\":3}},{\"id\":2,\"epc\":\"e2 00 51 80 00 08 02 35 15 40 7b 3b\",\"name\":\"Leche Cart\\u00f3n La Serenisima\",\"price\":\"13.50\",\"category_id\":1,\"created_at\":\"2017-10-10 21:02:29\",\"updated_at\":\"2017-10-29 21:04:47\",\"deleted_at\":null,\"pivot\":{\"purchase_id\":65,\"product_id\":2,\"count\":2}},{\"id\":5,\"epc\":\"e2 00 00 16 01 02 02 31 09 50 b9 75\",\"name\":\"Matarazzo Coditos\",\"price\":\"27.50\",\"category_id\":5,\"created_at\":\"2017-10-10 21:02:29\",\"updated_at\":\"2017-10-29 21:04:47\",\"deleted_at\":null,\"pivot\":{\"purchase_id\":65,\"product_id\":5,\"count\":1}}]}"
+				}
+			]
 		}
 	]
 }
