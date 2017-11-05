@@ -46,6 +46,11 @@
                                 <a href="{{ route('purchases.index') }}">Compras</a>
                             </li>
                         </ul>
+                        <ul class="nav navbar-nav" style="float: right;">
+                            <li>
+                                <a href="{{ route('logout') }}">Cerrar Sesión <i class="fa fa-power-off" aria-hidden="true"></i> </a>
+                            </li>
+                        </ul>
                     </div>
                     <!-- /.navbar-collapse -->
                 </div>
