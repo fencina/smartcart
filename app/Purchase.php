@@ -35,6 +35,14 @@ class Purchase extends Model
     }
 
     /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function group()
+    {
+        return $this->belongsTo(Group::class);
+    }
+
+    /**
      * Filter pending purchases
      *
      * @param $query
