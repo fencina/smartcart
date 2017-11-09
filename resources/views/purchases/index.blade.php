@@ -3,9 +3,13 @@
 
 @section('content')
 
+    @php
+        $montoTotal = 0;
+    @endphp
+
     <div class="container">
         @if($purchase)
-            <table class="table table-hover">
+            <table id="productsTable" class="table table-hover">
                 <thead>
                     <th>Nombre</th>
                     <th>Precio Unitario</th>
@@ -13,12 +17,21 @@
                     <th>Sub Total</th>
                 </thead>
                 <tbody>
+
                 @foreach($purchase->products as $product)
-                    <tr>
+                    <tr id="{{$product->id}}">
                         <td>{{ $product->name }}</td>
                         <td>{{ "$$product->price" }}</td>
                         <td>{{ $product->pivot->count }}</td>
                         <td>{{ '$'.$product->price * $product->pivot->count }}</td>
+                        @php
+                            $montoTotal += $product->price * $product->pivot->count;
+                        @endphp
+                        <td>
+                            <button onclick='borrarProducto({{$product->id}})'>
+                                <i class="fa fa-minus-circle"></i>
+                            </button>
+                        </td>
                     </tr>
 
                     @if($loop->last)
@@ -26,7 +39,9 @@
                             <td></td>
                             <td></td>
                             <td style="text-align: right">Total:</td>
-                            <td>{{ '$'.$purchase->amounts }}</td>
+                            <!--<td id="montoTotal">{{ '$'.$purchase->amounts }}</td>-->
+                            <td id="montoTotal">{{'$'.$montoTotal}}</td>
+                            <td></td>
                         </tr>
                     @endif
                 @endforeach
@@ -34,7 +49,7 @@
             </table>
 
             {!! Form::open(['route' => ['purchases.confirm', $purchase]]) !!}
-                <button type="submit" class="btn btn-info">Confirmar compra</button>
+                <button type="submit" class="btn btn-info" onclick="confirmarCompra">Confirmar compra</button>
             {!! Form::close() !!}
         @else
            <p>Esperando una compra...</p>
@@ -48,6 +63,45 @@
                 location.reload();
             })
         })
+
+
+        function borrarProducto($variable){
+            var montoTotal = $('#montoTotal').text();
+            montoTotal = montoTotal.substring(1, montoTotal.length)
+            var cantidad = jQuery("#"+$variable).find("td:eq(2)").text();
+            var precio = jQuery("#"+$variable).find("td:eq(3)").text();
+            precio = precio.substring(1, precio.length);
+            var precioProducto = cantidad * precio;
+            montoTotal -= precioProducto;
+            $('#montoTotal').text("$"+montoTotal);
+            $("#"+$variable).remove();
+        }
+
+        function confirmarCompra(){
+            /*
+            var ajaxurl = '';
+            ajaxurl = ajaxurl.replace(':id', {{ $purchase->id }});
+            var compra = construirCompraJson();
+            $.ajax({
+                url: ajaxurl,
+                type: "POST",
+                data: compra,
+                success: function(data){
+                    alert("asf");
+                }
+            });
+            */
+            alert("FALTA ARMAR PEDIDO AJAX");
+        }
+
+        function construirCompraJson(){
+            var result = {};
+            var products = {};
+            result["id"] = {{ $purchase->id }};
+            result["products"] = products;
+            return result;
+        }
+
     </script>
 
 @endsection
