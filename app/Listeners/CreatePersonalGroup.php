@@ -26,7 +26,7 @@ class CreatePersonalGroup
     public function handle(ClientCreated $event)
     {
         $group = new Group();
-        $group->name = 'Personal Group for ' . $event->client->email;
+        $group->name = 'Mis compras';
         $group->personal = true;
         $group->save();
 

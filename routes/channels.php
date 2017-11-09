@@ -14,3 +14,7 @@
 Broadcast::channel('new-purchase', function ($user) {
     return $user->hasRole(\App\Role::CASHIER) OR $user->hasRole(\App\Role::SUPER_ADMIN);
 });
+
+Broadcast::channel('purchase-associated', function ($user) {
+    return true;
+});

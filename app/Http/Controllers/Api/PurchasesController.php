@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Events\PurchaseCreated;
+use App\Events\PurchaseAssociated;
 use App\Group;
 use App\Http\Requests\PurchaseFormRequest;
 use App\Product;
@@ -15,6 +15,11 @@ use Illuminate\Support\Facades\Auth;
 
 class PurchasesController extends Controller
 {
+
+    public function index(Group $group)
+    {
+        return response()->json($group->purchases->load('products'));
+    }
 
     /**
      * Store a newly created resource in storage.
@@ -42,8 +47,6 @@ class PurchasesController extends Controller
         })->toArray();
 
         $purchase->products()->attach($products);
-
-        event(new PurchaseCreated());
 
         return response()->json($purchase->load('products'));
     }
@@ -77,8 +80,6 @@ class PurchasesController extends Controller
 
         $purchase->products()->attach($products);
 
-        event(new PurchaseCreated());
-
         return response()->json($purchase->load('products'));
     }
 
@@ -107,4 +108,12 @@ class PurchasesController extends Controller
         return response()->json($group->purchases()->where('id', $purchase->id)->first());
     }
 
+    public function associate(Request $request, Group $group, Purchase $purchase)
+    {
+        $purchase->group()->associate($group)->save();
+
+        event(new PurchaseAssociated());
+
+        return response()->json($purchase->load('products'));
+    }
 }

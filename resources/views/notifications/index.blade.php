@@ -16,7 +16,6 @@
                 <th>Título</th>
                 <th>Descripción</th>
                 <th>Fecha de envío</th>
-                <th>Cantidad Usuarios</th>
             </tr>
         </thead>
         <tbody>
@@ -26,7 +25,6 @@
                     <td>{{ $notification->title ?? '-' }}</td>
                     <td>{{ $notification->description }}</td>
                     <td>{{ $notification->created_at }}</td>
-                    <td>{{ $notification->sent_count }}</td>
                 </tr>
             @endforeach
         </tbody>

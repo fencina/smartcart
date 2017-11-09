@@ -17,8 +17,7 @@ class PurchaseController extends Controller
 
     public function confirm(Request $request, Purchase $purchase)
     {
-        $purchase->status()->associate(Status::confirmed());
-        $purchase->save();
+        $purchase->status()->associate(Status::confirmed())->save();
 
         return view('purchases.confirm', compact('purchase'));
     }

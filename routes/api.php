@@ -29,4 +29,5 @@ Route::middleware(['auth:api'])->group( function () {
 
     Route::resource('purchases', 'PurchasesController', ['only' => ['store']]);
     Route::resource('groups.purchases', 'PurchasesController', ['only' => ['index', 'show']]);
+    Route::post('/groups/{group}/purchases/{purchase}/associate', ['uses' => 'PurchasesController@associate']);
 });
