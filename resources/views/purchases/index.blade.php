@@ -78,26 +78,12 @@
         }
 
         function confirmarCompra(){
-            /*
-            var ajaxurl = '';
-            ajaxurl = ajaxurl.replace(':id', {{ $purchase->id }});
-            var compra = construirCompraJson();
-            $.ajax({
-                url: ajaxurl,
-                type: "POST",
-                data: compra,
-                success: function(data){
-                    alert("asf");
-                }
-            });
-            */
             alert("FALTA ARMAR PEDIDO AJAX");
         }
 
         function construirCompraJson(){
             var result = {};
             var products = {};
-            result["id"] = {{ $purchase->id }};
             result["products"] = products;
             return result;
         }
