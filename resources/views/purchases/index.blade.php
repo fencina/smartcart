@@ -39,7 +39,6 @@
                             <td></td>
                             <td></td>
                             <td style="text-align: right">Total:</td>
-                            <!--<td id="montoTotal">{{ '$'.$purchase->amounts }}</td>-->
                             <td id="montoTotal">{{'$'.$montoTotal}}</td>
                             <td></td>
                         </tr>
@@ -49,7 +48,8 @@
             </table>
 
             {!! Form::open(['route' => ['purchases.confirm', $purchase]]) !!}
-                <button type="submit" class="btn btn-info" onclick="confirmarCompra">Confirmar compra</button>
+                <input type="hidden" name="finalProducts">
+                <button class="btn btn-info" onclick="confirmarCompra(event);">Confirmar compra</button>
             {!! Form::close() !!}
         @else
            <p>Esperando una compra...</p>
@@ -69,7 +69,7 @@
             var montoTotal = $('#montoTotal').text();
             montoTotal = montoTotal.substring(1, montoTotal.length)
             var cantidad = jQuery("#"+$variable).find("td:eq(2)").text();
-            var precio = jQuery("#"+$variable).find("td:eq(3)").text();
+            var precio = jQuery("#"+$variable).find("td:eq(1)").text();
             precio = precio.substring(1, precio.length);
             var precioProducto = cantidad * precio;
             montoTotal -= precioProducto;
@@ -77,15 +77,26 @@
             $("#"+$variable).remove();
         }
 
-        function confirmarCompra(){
-            alert("FALTA ARMAR PEDIDO AJAX");
+        function confirmarCompra(e){
+            e.preventDefault();
+            construirCompraJson();
+            $('form').submit();
         }
 
         function construirCompraJson(){
-            var result = {};
-            var products = {};
-            result["products"] = products;
-            return result;
+            var products = [];
+
+            $("#productsTable tbody tr").each(function (index, row) {
+                product = {};
+                product.id = $(row).attr('id');
+                product.count = $(row).find("td:eq(2)").text();
+
+                products.push(product);
+            });
+
+            products.pop();
+            products = JSON.stringify(products);
+            $("[name='finalProducts']").val(products);
         }
 
     </script>
