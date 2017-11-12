@@ -3,6 +3,8 @@
     <head>
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
+        <link rel="shortcut icon" type="image/png" href="{{ asset('storage/img/logo.png') }}"/>
+
         <title>@yield('title')</title>
 
         <link rel="stylesheet" href="{{ URL::asset('css/app.css') }}" />
@@ -36,15 +38,16 @@
                         -->
                     </div>
                     <!-- Collect the nav links, forms, and other content for toggling -->
+                    @if(Auth::check())
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav">
-                            <li>
+                            <li style="display: @if(!(Auth::user()->isAdminUser() OR Auth::user()->isSuperAdmin())) none @endif">
                                 <a href="{{ route('users.index') }}">Operadores</a>
                             </li>
-                            <li>
+                            <li style="display: @if(!(Auth::user()->isAdminPush() OR Auth::user()->isSuperAdmin())) none @endif">
                                 <a href="{{ route('notifications.index') }}">Notificaciones</a>
                             </li>
-                            <li>
+                            <li style="display: @if(!(Auth::user()->isCashier() OR Auth::user()->isSuperAdmin())) none @endif">
                                 <a href="{{ route('purchases.index') }}">Compras</a>
                             </li>
                         </ul>
@@ -54,6 +57,7 @@
                             </li>
                         </ul>
                     </div>
+                    @endif
                     <!-- /.navbar-collapse -->
                 </div>
                 <!-- /.container -->
