@@ -68,4 +68,34 @@ class User extends Authenticatable
     {
         return $this->role->id == Role::SUPER_ADMIN;
     }
+
+    /**
+     * Check if the user is a AdminUser
+     *
+     * @return bool
+     */
+    public function isAdminUser()
+    {
+        return $this->role->id == Role::ADMIN_USERS;
+    }
+
+    /**
+     * Check if the user is a AdminPush
+     *
+     * @return bool
+     */
+    public function isAdminPush()
+    {
+        return $this->role->id == Role::ADMIN_PUSH;
+    }
+
+    /**
+     * Check if the user is a Cashier
+     *
+     * @return bool
+     */
+    public function isCashier()
+    {
+        return $this->role->id == Role::CASHIER;
+    }
 }
