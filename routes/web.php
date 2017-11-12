@@ -24,10 +24,10 @@ Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 
 
 // Home
-Route::get('/', 'HomeController@home')->name('home');
 
 // Panel Routes
 Route::middleware(['auth'])->group( function () {
+    Route::get('/', 'HomeController@home')->name('home');
 
     Route::middleware(['role:' . \App\Role::ADMIN_USERS])->group( function () {
         Route::resource('users','UserController', ['except' => ['show']]);
