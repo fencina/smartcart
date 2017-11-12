@@ -23,7 +23,7 @@
                         <td>{{ $product->name }}</td>
                         <td>{{ "$$product->price" }}</td>
                         <td>{{ $product->pivot->count }}</td>
-                        <td>{{ '$'.$product->price * $product->pivot->count }}</td>
+                        <td>{{ '$' . number_format($product->price * $product->pivot->count, 2) }}</td>
                         @php
                             $montoTotal += $product->price * $product->pivot->count;
                         @endphp
