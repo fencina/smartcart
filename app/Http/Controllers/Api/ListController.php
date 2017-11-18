@@ -13,7 +13,7 @@ class ListController extends Controller
 {
     public function index(Group $group)
     {
-        return response()->json($group->lists);
+        return response()->json($group->lists->load('products'));
     }
 
     public function store(ListFormRequest $request, Group $group)
