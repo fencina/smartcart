@@ -7,6 +7,7 @@ use App\Group;
 use App\Http\Requests\PurchaseFormRequest;
 use App\Product;
 use App\Purchase;
+use App\Services\IonicPushNotificationService;
 use App\Status;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Http\Request;
@@ -15,6 +16,15 @@ use Illuminate\Support\Facades\Auth;
 
 class PurchasesController extends Controller
 {
+    /**
+     * @var IonicPushNotificationService;
+     */
+    var $pushNotificationService;
+
+    public function __construct(IonicPushNotificationService $pushNotificationService)
+    {
+        $this->pushNotificationService = $pushNotificationService;
+    }
 
     public function index(Group $group)
     {
@@ -113,6 +123,20 @@ class PurchasesController extends Controller
         $purchase->group()->associate($group)->save();
 
         event(new PurchaseAssociated());
+
+        $notificationPayload = [
+            'groupId' => $group->id,
+            'purchaseId' => $purchase->id
+        ];
+
+        $deviceTokens = $group->clients->whereNotIn('id', [Auth::user()->id])
+                                    ->pluck('device_token')
+                                    ->filter(function ($deviceToken) {
+                                        return !is_null($deviceToken);
+                                    })
+                                    ->toArray();
+
+        $this->pushNotificationService->sendTo($deviceTokens, 'Un miembro del grupo ' . $group->name . ' realizó una compra', '¡Se realizó una compra!', $notificationPayload);
 
         return response()->json($purchase->load('products'));
     }
