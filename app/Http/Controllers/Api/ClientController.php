@@ -2,21 +2,22 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Client;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 class ClientController extends Controller
 {
-    public function addDeviceToken(Request $request, Client $client)
+    public function addDeviceToken(Request $request)
     {
         $this->validate($request, [
             'device_token' => 'required'
         ]);
 
-        $client->device_token = $request->input('device_token');
-        $client->save();
+        $authUser = Auth::user();
+        $authUser->device_token = $request->input('device_token');
+        $authUser->save();
 
-        return response()->json($client);
+        return response()->json($authUser);
     }
 }
