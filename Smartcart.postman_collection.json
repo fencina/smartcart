@@ -32,7 +32,7 @@
 			},
 			"response": [
 				{
-					"id": "dd4a9129-b16a-4169-9486-56b39b2e26b9",
+					"id": "050bba70-9b08-4011-8c0d-ce9ed0abc7b2",
 					"name": "Register client with missing params",
 					"originalRequest": {
 						"url": "http://{{host}}/api/register",
@@ -115,7 +115,7 @@
 					"body": "{\"error\":\"ValidationException\",\"data\":{\"name\":[\"The name field is required.\"],\"last_name\":[\"The last name field is required.\"],\"email\":[\"The email field is required.\"],\"password\":[\"The password field is required.\"]}}"
 				},
 				{
-					"id": "82ec70a0-18e5-47c8-88bf-de14f459abae",
+					"id": "69d70872-28c8-45d9-b723-f48bb9347731",
 					"name": "Register client successfully",
 					"originalRequest": {
 						"url": "http://{{host}}/api/register",
@@ -231,7 +231,7 @@
 			},
 			"response": [
 				{
-					"id": "2d3f2a0e-fd6f-46cc-8183-4daf9532d5e2",
+					"id": "4bbed2ca-5ea3-4e29-9a6d-877039c72e33",
 					"name": "Login client with invalid credentials",
 					"originalRequest": {
 						"url": "http://{{host}}/api/login",
@@ -314,7 +314,7 @@
 					"body": "{\"error\":\"Client error: `POST http:\\/\\/smartcart.dev\\/oauth\\/token` resulted in a `401 Unauthorized` response:\\n{\\\"error\\\":\\\"invalid_credentials\\\",\\\"message\\\":\\\"The user credentials were incorrect.\\\"}\\n\"}"
 				},
 				{
-					"id": "30ede06a-fb0c-4e5d-9081-add48f814645",
+					"id": "eeeaeb92-fc0b-4e54-8da2-16bc65ab5582",
 					"name": "Login client with missing param",
 					"originalRequest": {
 						"url": "http://{{host}}/api/login",
@@ -397,7 +397,7 @@
 					"body": "{\"error\":\"ValidationException\",\"data\":{\"password\":[\"The password field is required.\"]}}"
 				},
 				{
-					"id": "ec8bd08f-ff12-49b9-8a4c-0c2680d27aa8",
+					"id": "d7c71faf-daa6-4dae-8a74-5dbed1524447",
 					"name": "Login client successfully",
 					"originalRequest": {
 						"url": "http://{{host}}/api/login",
@@ -513,7 +513,7 @@
 			},
 			"response": [
 				{
-					"id": "7739bbd0-7d44-487b-a4c0-b521cc771c20",
+					"id": "d6bb6351-da49-4d57-b59f-7e1dc1d1e5e3",
 					"name": "Facebook Login Successfully",
 					"originalRequest": {
 						"url": "http://{{host}}/api/facebookLogin",
@@ -633,7 +633,7 @@
 			},
 			"response": [
 				{
-					"id": "ffe519b5-9e70-44c8-a201-089c4ba02e79",
+					"id": "aac4469c-bf1e-47ae-8fcf-fb2a8c57e9c0",
 					"name": "Google Login Successfully",
 					"originalRequest": {
 						"url": "http://{{host}}/api/googleLogin",
@@ -865,7 +865,7 @@
 			},
 			"response": [
 				{
-					"id": "07e2d0a0-ef76-425b-a9aa-b465074215aa",
+					"id": "1c4142e3-a2a2-4407-9d67-7f1d782da591",
 					"name": "Search products by name",
 					"originalRequest": {
 						"url": {
@@ -977,7 +977,7 @@
 					"body": "[{\"id\":2,\"name\":\"Leche Cart\\u00f3n La Serenisima\",\"price\":\"13.50\",\"category_id\":1,\"created_at\":\"2017-10-10 21:02:29\",\"updated_at\":\"2017-10-10 21:02:29\",\"deleted_at\":null}]"
 				},
 				{
-					"id": "f9a28df4-55e7-4cce-8676-fb704d243866",
+					"id": "7b4e2044-335e-45af-9aa3-e4d0e333a652",
 					"name": "Search model without filters returns all products",
 					"originalRequest": {
 						"url": "http://{{host}}/api/search/products",
@@ -1293,7 +1293,7 @@
 			},
 			"response": [
 				{
-					"id": "cad9dd40-15aa-41d1-9213-50d8e9d7054a",
+					"id": "7f1c7e5d-12e7-4f6d-bf25-fea2ce2f9e9d",
 					"name": "Get group's purchases with products",
 					"originalRequest": {
 						"url": "http://{{host}}/api/groups/4/purchases",
@@ -1408,7 +1408,7 @@
 			},
 			"response": [
 				{
-					"id": "c01ecc12-71a5-42d3-b09c-e4f1642c3227",
+					"id": "ab0af498-4201-47b5-9d4d-67b9c3d52ddf",
 					"name": "Associate purchase to group successfully",
 					"originalRequest": {
 						"url": "http://{{host}}/api/groups/4/purchases/65/associate",
@@ -1500,6 +1500,38 @@
 					"body": "{\"id\":65,\"group_id\":4,\"created_at\":\"2017-11-04 20:33:05\",\"updated_at\":\"2017-11-04 20:33:37\",\"status_id\":2,\"amounts\":\"204.50\",\"group\":{\"id\":4,\"name\":\"Trabajo\",\"personal\":0,\"created_at\":\"2017-10-07 06:30:07\",\"updated_at\":\"2017-10-07 06:30:07\",\"deleted_at\":null},\"products\":[{\"id\":1,\"epc\":\"e2 00 51 69 65 0e 01 81 15 50 7a 74\",\"name\":\"Coca-Cola 3lt.\",\"price\":\"50.00\",\"category_id\":3,\"created_at\":\"2017-10-10 21:02:29\",\"updated_at\":\"2017-10-29 21:00:50\",\"deleted_at\":null,\"pivot\":{\"purchase_id\":65,\"product_id\":1,\"count\":3}},{\"id\":2,\"epc\":\"e2 00 51 80 00 08 02 35 15 40 7b 3b\",\"name\":\"Leche Cart\\u00f3n La Serenisima\",\"price\":\"13.50\",\"category_id\":1,\"created_at\":\"2017-10-10 21:02:29\",\"updated_at\":\"2017-10-29 21:04:47\",\"deleted_at\":null,\"pivot\":{\"purchase_id\":65,\"product_id\":2,\"count\":2}},{\"id\":5,\"epc\":\"e2 00 00 16 01 02 02 31 09 50 b9 75\",\"name\":\"Matarazzo Coditos\",\"price\":\"27.50\",\"category_id\":5,\"created_at\":\"2017-10-10 21:02:29\",\"updated_at\":\"2017-10-29 21:04:47\",\"deleted_at\":null,\"pivot\":{\"purchase_id\":65,\"product_id\":5,\"count\":1}}]}"
 				}
 			]
+		},
+		{
+			"name": "Add device token to a client",
+			"request": {
+				"url": "http://{{host}}/api/clients/10/deviceToken",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImNlZmEwNjczN2ZmYjMwZGU4OWQyMmNlYjA1YWM2NTE5NTU5MzA4MzA4NGM4YmI4YjhjNWEzYzE4YTIwZmIzNmE3YzJkMDIwZTNkZWYxZDkyIn0.eyJhdWQiOiIyIiwianRpIjoiY2VmYTA2NzM3ZmZiMzBkZTg5ZDIyY2ViMDVhYzY1MTk1NTkzMDgzMDg0YzhiYjhiOGM1YTNjMThhMjBmYjM2YTdjMmQwMjBlM2RlZjFkOTIiLCJpYXQiOjE1MDczNTc0MTMsIm5iZiI6MTUwNzM1NzQxMywiZXhwIjoxNTM4ODkzNDEzLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.TgRk9aJcIHluXPQLg0_g39HgtvdWBrB0th3ghRmlYIEIrwU37pDj94TNeCOJKhmYBqvZ0YIhx8dVppe1WFnLD9YPe9Rrso60F1tVBo1pp0yzQddl1aMs6t9zWkmedW50IlP5KGf98z5UCvBMpJriEDq3VbUg_i5P_KQa3CB_UtIey2ZSyzFqjb2irqrQKrceq9OLVMrGR_bkoV8IXg6lxr2Dt4p9SNYvvggz1dpSMBBh8v1sqF0kreDfRCwkCwuEP4vLTduXpvFVZdUJH_FhOsTpDINJ8_RYX8VURe2x0A2VMxnjJ8NxhdU1XT06drIiJ5RVkwI8LaS4-PZotk1ygukIXzyDBpK8gmvoLb8Tnun5sGFBi6tYpgj0fNdBDCfJMPg_3xmJBtA4LNdW6B65kAZt9JjGaITXPDlh2WBAefusuWsoQ5CIMONuA12vzpNoAfirO0EnlvoLiqwzcruipMeeO3dzN1tZ_Ir1Ai2VNaS7xcYeBJ6nGT_mVKnRKWoAbmxn52p88RoawH0-vxnsR-1zWB9QRAvu7Ceoasmm-TJWrH7Ih0VEtrKLICuyUKkJM8Hu3UwKhWNAvbfplwUXZud0IdxHwc6y5mzQkUtD8z4uC0qxlGuv4G3Yoab7zAESXZQnKUNKiE8arw5WcaH3I61jIgdu5c7s7X2m23ahZwA",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "device_token",
+							"value": "asd",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
 		}
 	]
 }
