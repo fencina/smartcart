@@ -75,6 +75,10 @@ class IonicPushNotificationService
      */
     protected function send($notification, $toAll = false, $tokens = null, $payload = null)
     {
+        if ($payload) {
+            $notification['payload'] = $payload;
+        }
+
         $requestBody = [
             "send_to_all" => $toAll,
             "profile" => "dev",
@@ -83,10 +87,6 @@ class IonicPushNotificationService
 
         if ($tokens) {
             $requestBody['tokens'] = $tokens;
-        }
-
-        if ($payload) {
-            $requestBody['payload'] = $payload;
         }
 
         $this->guzzleClient->request('POST', url('https://api.ionic.io/push/notifications'), [
