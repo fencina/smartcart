@@ -13,6 +13,7 @@ class Product extends Model
         'epc',
         'name',
         'price',
+        'calories',
     ];
 
     protected $dates = [
