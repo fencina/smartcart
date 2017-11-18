@@ -9,6 +9,20 @@ use App\Client;
 
 class NotificationController extends Controller
 {
+    /**
+     * @var IonicPushNotificationService;
+     */
+    var $pushNotificationService;
+
+    /**
+     * NotificationController constructor.
+     * @param IonicPushNotificationService $pushNotificationService
+     */
+    public function __construct(IonicPushNotificationService $pushNotificationService)
+    {
+        $this->pushNotificationService = $pushNotificationService;
+    }
+
     public function index()
     {
         $notifications = Notification::paginate(10);
@@ -24,8 +38,7 @@ class NotificationController extends Controller
     public function store(NotificationFormRequest $request)
     {
         try {
-            $pushNotificacionService = app(IonicPushNotificationService::class);
-            $pushNotificacionService->broadcast($request->input('description'), $request->input('title'));
+            $this->pushNotificationService->broadcast($request->input('description'), $request->input('title'));
 
             $notification = new Notification();
             $notification->fill($request->all());
