@@ -75,7 +75,7 @@ class PurchasesController extends Controller
 
         $products = $requestedProducts->mapWithKeys(function ($requestedProduct) use ($count) {
             $product = Product::where('epc', $requestedProduct['epc'])->first();
-            return [$product->id => ['count' => $count]];
+            return $product ? [$product->id => ['count' => $count]] : [];
         })->toArray();
 
         $purchase->products()->attach($products);
