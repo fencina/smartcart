@@ -18,6 +18,7 @@ class Client extends Authenticatable
         'last_name',
         'email',
         'password',
+        'device_token',
         'facebook_id',
         'google_id',
     ];
