@@ -1,0 +1,51 @@
+#panelLoginSmartCart {
+    background-color: #0e3f5c;
+    font-weight: bold;
+    color: white;
+    font-size: large;
+}
+
+.lblForms {
+    color: #2a2222;
+    font-size: large;
+}
+
+.smartcart-navbar {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    font-size: large
+}
+
+.btn-login {
+    color: #fff;
+    background-color: #D83408;
+    border-color: transparent;
+    font-weight: bold;
+    font-size: large;
+}
+
+.btn-login:hover {
+    color: #fff;
+    background-color: #11540a;
+    border-color: transparent;
+}
+
+.btn-reset-pwd {
+    color: #ce0909;
+    font-weight: bold;
+}
+
+.input-form {
+    border-color: grey;
+}
+
+#logoSmartcart {
+    width: 20%;
+    height: 15%;
+    float: left;
+}
+
+.container-qr {
+    text-align: center;
+}

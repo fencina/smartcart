@@ -4,9 +4,9 @@
 @section('content')
 
 
-    <div>
-        {!! QrCode::size(100)->generate( $purchase->id ) !!}
-        <p>¡Confirmá tu compra!</p>
+    <div class="container-qr">
+        {!! QrCode::size(300)->generate( $purchase->id ) !!}
+        <p style="font-size: xx-large;font-weight: bold;color: darkblue;">¡Confirmá tu compra!</p>
     </div>
 
 

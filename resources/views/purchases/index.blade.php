@@ -35,11 +35,11 @@
                     </tr>
 
                     @if($loop->last)
-                        <tr style="background-color: lightgreen">
+                        <tr style="background-color: darkgreen">
                             <td></td>
                             <td></td>
-                            <td style="text-align: right">Total:</td>
-                            <td id="montoTotal">{{'$'.$montoTotal}}</td>
+                            <td style="text-align: right; font-weight: bold; color: white;">Total:</td>
+                            <td style="font-weight: bold; color: white;" id="montoTotal">{{'$'.$montoTotal}}</td>
                             <td></td>
                         </tr>
                     @endif
