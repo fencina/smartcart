@@ -8,6 +8,12 @@ use Illuminate\Support\Facades\Auth;
 
 class ClientController extends Controller
 {
+    /**
+     * Add client's device token
+     *
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
+     */
     public function addDeviceToken(Request $request)
     {
         $this->validate($request, [
@@ -19,5 +25,17 @@ class ClientController extends Controller
         $authUser->save();
 
         return response()->json($authUser);
+    }
+
+    /**
+     * Return all client's purchases
+     *
+     * @return mixed
+     */
+    public function purchases()
+    {
+        return Auth::user()->groups->map(function ($group) {
+            return $group->purchases->load('products');
+        })->flatten();
     }
 }

@@ -30,6 +30,7 @@ Route::middleware(['auth:api'])->group( function () {
     Route::post('/groups/{group}/purchases/{purchase}/associate', ['uses' => 'PurchasesController@associate']);
 
     Route::post('clients/deviceToken', ['uses' => 'ClientController@addDeviceToken']);
+    Route::get('/purchases', ['uses' => 'ClientController@purchases']);
 
     Route::resource('products', 'ProductController', ['only' => ['show']]);
 });
