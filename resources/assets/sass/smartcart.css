@@ -41,9 +41,11 @@
 }
 
 #logoSmartcart {
-    width: 20%;
+    width: 15%;
     height: 15%;
     float: left;
+    padding-top: 10px;
+    padding-right: 5px;
 }
 
 .container-qr {
