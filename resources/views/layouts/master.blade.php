@@ -3,18 +3,18 @@
     <head>
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <link rel="shortcut icon" type="image/png" href="{{ asset('storage/img/logo.png') }}?asd=qweq"/>
+        <link rel="shortcut icon" type="image/png" href="{{ asset('storage/img/logo.png') }}"/>
 
         <title>@yield('title')</title>
 
-        <link rel="stylesheet" href="{{ URL::asset('css/app.css') }}" />
-        <link href="{{ asset('css/smartcart.css') }}" rel="stylesheet">
+        <link rel="stylesheet" href="{{ mix('css/app.css') }}" />
+        <link href="{{ mix('css/smartcart.css') }}" rel="stylesheet">
 
         <!-- Font Awesome CDN -->
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
         <!--<script src="{{ mix('js/app.js') }}"></script>-->
-        <script src="{{ asset('js/app.js') }}"></script>
+        <script src="{{ mix('js/app.js') }}"></script>
 
 
     </head>
