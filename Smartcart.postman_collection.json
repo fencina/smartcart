@@ -32,7 +32,7 @@
 			},
 			"response": [
 				{
-					"id": "c10cb6e0-7e09-40cc-8323-c43a524941b3",
+					"id": "ec423f91-0e87-46eb-944e-ff5c919addf9",
 					"name": "Register client with missing params",
 					"originalRequest": {
 						"url": "http://{{host}}/api/register",
@@ -114,7 +114,7 @@
 					"body": "{\"error\":\"ValidationException\",\"data\":{\"name\":[\"The name field is required.\"],\"last_name\":[\"The last name field is required.\"],\"email\":[\"The email field is required.\"],\"password\":[\"The password field is required.\"]}}"
 				},
 				{
-					"id": "f0bfb4d4-6213-42ce-9f79-e2e26ede1e36",
+					"id": "799f4b49-1a6c-4eda-afdc-6538626f9a6c",
 					"name": "Register client successfully",
 					"originalRequest": {
 						"url": "http://{{host}}/api/register",
@@ -229,7 +229,7 @@
 			},
 			"response": [
 				{
-					"id": "a421d1b6-9d97-4aaf-881a-05c8459e8e02",
+					"id": "e15bdae9-8b5c-4ebb-b5f5-71825a2b66c0",
 					"name": "Login client with invalid credentials",
 					"originalRequest": {
 						"url": "http://{{host}}/api/login",
@@ -311,7 +311,7 @@
 					"body": "{\"error\":\"Client error: `POST http:\\/\\/smartcart.dev\\/oauth\\/token` resulted in a `401 Unauthorized` response:\\n{\\\"error\\\":\\\"invalid_credentials\\\",\\\"message\\\":\\\"The user credentials were incorrect.\\\"}\\n\"}"
 				},
 				{
-					"id": "f57d1558-8cbe-40f8-a828-7338301b5b27",
+					"id": "67670d39-cafa-4630-90cd-83e93ebc5f0e",
 					"name": "Login client with missing param",
 					"originalRequest": {
 						"url": "http://{{host}}/api/login",
@@ -393,7 +393,7 @@
 					"body": "{\"error\":\"ValidationException\",\"data\":{\"password\":[\"The password field is required.\"]}}"
 				},
 				{
-					"id": "5c5dceed-f278-45f5-8441-46d5a9017bf1",
+					"id": "f1469eaf-9cc2-48ef-84a6-2005ca5a2a1e",
 					"name": "Login client successfully",
 					"originalRequest": {
 						"url": "http://{{host}}/api/login",
@@ -508,7 +508,7 @@
 			},
 			"response": [
 				{
-					"id": "026f35ad-8f4b-493d-8118-b5c163990579",
+					"id": "4e39cfee-39de-442f-b641-da1cf99f280c",
 					"name": "Facebook Login Successfully",
 					"originalRequest": {
 						"url": "http://{{host}}/api/facebookLogin",
@@ -627,7 +627,7 @@
 			},
 			"response": [
 				{
-					"id": "95e96c02-1bf3-418f-9750-03cf79f96eb3",
+					"id": "a52d2d45-f255-44db-b63d-6d5d215dae57",
 					"name": "Google Login Successfully",
 					"originalRequest": {
 						"url": "http://{{host}}/api/googleLogin",
@@ -858,7 +858,7 @@
 			},
 			"response": [
 				{
-					"id": "1cdf2af9-8ef0-44ce-a65e-8c5e87a36cf4",
+					"id": "b1bdeff0-672a-463b-90e8-221bdbb3b324",
 					"name": "Search products by name",
 					"originalRequest": {
 						"url": {
@@ -969,7 +969,7 @@
 					"body": "[{\"id\":2,\"name\":\"Leche Cart\\u00f3n La Serenisima\",\"price\":\"13.50\",\"category_id\":1,\"created_at\":\"2017-10-10 21:02:29\",\"updated_at\":\"2017-10-10 21:02:29\",\"deleted_at\":null}]"
 				},
 				{
-					"id": "56c98857-e83b-49b3-8665-addcab890b39",
+					"id": "04819482-89e2-4814-93cf-f6807f6f4f77",
 					"name": "Search model without filters returns all products",
 					"originalRequest": {
 						"url": "http://{{host}}/api/search/products",
@@ -1284,7 +1284,7 @@
 			},
 			"response": [
 				{
-					"id": "139bb610-32c6-41bf-8a92-c43637e31b48",
+					"id": "9b5124f4-bfa0-4698-9d1e-f5e6bfa4f9eb",
 					"name": "Get group's purchases with products",
 					"originalRequest": {
 						"url": "http://{{host}}/api/groups/4/purchases",
@@ -1398,7 +1398,7 @@
 			},
 			"response": [
 				{
-					"id": "7d7306eb-0d39-47bd-96cd-d843f2fcfbb5",
+					"id": "d1352e1d-2cfc-490a-a987-f5fd0a9b2d06",
 					"name": "Associate purchase to group successfully",
 					"originalRequest": {
 						"url": "http://{{host}}/api/groups/4/purchases/65/associate",
@@ -1543,6 +1543,121 @@
 				"description": ""
 			},
 			"response": []
+		},
+		{
+			"name": "Get all client's purchases",
+			"request": {
+				"url": "http://{{host}}/api/purchases",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImNlZmEwNjczN2ZmYjMwZGU4OWQyMmNlYjA1YWM2NTE5NTU5MzA4MzA4NGM4YmI4YjhjNWEzYzE4YTIwZmIzNmE3YzJkMDIwZTNkZWYxZDkyIn0.eyJhdWQiOiIyIiwianRpIjoiY2VmYTA2NzM3ZmZiMzBkZTg5ZDIyY2ViMDVhYzY1MTk1NTkzMDgzMDg0YzhiYjhiOGM1YTNjMThhMjBmYjM2YTdjMmQwMjBlM2RlZjFkOTIiLCJpYXQiOjE1MDczNTc0MTMsIm5iZiI6MTUwNzM1NzQxMywiZXhwIjoxNTM4ODkzNDEzLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.TgRk9aJcIHluXPQLg0_g39HgtvdWBrB0th3ghRmlYIEIrwU37pDj94TNeCOJKhmYBqvZ0YIhx8dVppe1WFnLD9YPe9Rrso60F1tVBo1pp0yzQddl1aMs6t9zWkmedW50IlP5KGf98z5UCvBMpJriEDq3VbUg_i5P_KQa3CB_UtIey2ZSyzFqjb2irqrQKrceq9OLVMrGR_bkoV8IXg6lxr2Dt4p9SNYvvggz1dpSMBBh8v1sqF0kreDfRCwkCwuEP4vLTduXpvFVZdUJH_FhOsTpDINJ8_RYX8VURe2x0A2VMxnjJ8NxhdU1XT06drIiJ5RVkwI8LaS4-PZotk1ygukIXzyDBpK8gmvoLb8Tnun5sGFBi6tYpgj0fNdBDCfJMPg_3xmJBtA4LNdW6B65kAZt9JjGaITXPDlh2WBAefusuWsoQ5CIMONuA12vzpNoAfirO0EnlvoLiqwzcruipMeeO3dzN1tZ_Ir1Ai2VNaS7xcYeBJ6nGT_mVKnRKWoAbmxn52p88RoawH0-vxnsR-1zWB9QRAvu7Ceoasmm-TJWrH7Ih0VEtrKLICuyUKkJM8Hu3UwKhWNAvbfplwUXZud0IdxHwc6y5mzQkUtD8z4uC0qxlGuv4G3Yoab7zAESXZQnKUNKiE8arw5WcaH3I61jIgdu5c7s7X2m23ahZwA",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "95d0251d-1bc1-471b-9b5e-1f8082b1859f",
+					"name": "Get all client's purchases",
+					"originalRequest": {
+						"url": "http://{{host}}/api/purchases",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": "",
+								"warning": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImNlZmEwNjczN2ZmYjMwZGU4OWQyMmNlYjA1YWM2NTE5NTU5MzA4MzA4NGM4YmI4YjhjNWEzYzE4YTIwZmIzNmE3YzJkMDIwZTNkZWYxZDkyIn0.eyJhdWQiOiIyIiwianRpIjoiY2VmYTA2NzM3ZmZiMzBkZTg5ZDIyY2ViMDVhYzY1MTk1NTkzMDgzMDg0YzhiYjhiOGM1YTNjMThhMjBmYjM2YTdjMmQwMjBlM2RlZjFkOTIiLCJpYXQiOjE1MDczNTc0MTMsIm5iZiI6MTUwNzM1NzQxMywiZXhwIjoxNTM4ODkzNDEzLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.TgRk9aJcIHluXPQLg0_g39HgtvdWBrB0th3ghRmlYIEIrwU37pDj94TNeCOJKhmYBqvZ0YIhx8dVppe1WFnLD9YPe9Rrso60F1tVBo1pp0yzQddl1aMs6t9zWkmedW50IlP5KGf98z5UCvBMpJriEDq3VbUg_i5P_KQa3CB_UtIey2ZSyzFqjb2irqrQKrceq9OLVMrGR_bkoV8IXg6lxr2Dt4p9SNYvvggz1dpSMBBh8v1sqF0kreDfRCwkCwuEP4vLTduXpvFVZdUJH_FhOsTpDINJ8_RYX8VURe2x0A2VMxnjJ8NxhdU1XT06drIiJ5RVkwI8LaS4-PZotk1ygukIXzyDBpK8gmvoLb8Tnun5sGFBi6tYpgj0fNdBDCfJMPg_3xmJBtA4LNdW6B65kAZt9JjGaITXPDlh2WBAefusuWsoQ5CIMONuA12vzpNoAfirO0EnlvoLiqwzcruipMeeO3dzN1tZ_Ir1Ai2VNaS7xcYeBJ6nGT_mVKnRKWoAbmxn52p88RoawH0-vxnsR-1zWB9QRAvu7Ceoasmm-TJWrH7Ih0VEtrKLICuyUKkJM8Hu3UwKhWNAvbfplwUXZud0IdxHwc6y5mzQkUtD8z4uC0qxlGuv4G3Yoab7zAESXZQnKUNKiE8arw5WcaH3I61jIgdu5c7s7X2m23ahZwA",
+								"description": "",
+								"warning": ""
+							}
+						],
+						"body": {}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"name": "cache-control",
+							"key": "cache-control",
+							"value": "no-cache, private",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"name": "connection",
+							"key": "connection",
+							"value": "keep-alive",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "content-encoding",
+							"key": "content-encoding",
+							"value": "gzip",
+							"description": "The type of encoding used on the data."
+						},
+						{
+							"name": "content-type",
+							"key": "content-type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "date",
+							"key": "date",
+							"value": "Tue, 21 Nov 2017 00:54:15 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "server",
+							"key": "server",
+							"value": "nginx/1.12.2",
+							"description": "A name for the server"
+						},
+						{
+							"name": "transfer-encoding",
+							"key": "transfer-encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"name": "vary",
+							"key": "vary",
+							"value": "Accept-Encoding",
+							"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+						},
+						{
+							"name": "x-ratelimit-limit",
+							"key": "x-ratelimit-limit",
+							"value": "60",
+							"description": "Custom header"
+						},
+						{
+							"name": "x-ratelimit-remaining",
+							"key": "x-ratelimit-remaining",
+							"value": "58",
+							"description": "Custom header"
+						}
+					],
+					"cookie": [],
+					"responseTime": 40,
+					"body": "[{\"id\":98,\"group_id\":4,\"created_at\":\"2017-11-11 21:20:09\",\"updated_at\":\"2017-11-11 21:26:58\",\"status_id\":2,\"amounts\":\"1910.74\",\"products\":[{\"id\":2,\"epc\":\"e2 00 51 80 00 08 02 35 15 40 7b 3b\",\"name\":\"Leche Cart\\u00f3n La Serenisima\",\"price\":\"13.50\",\"calories\":100,\"category_id\":1,\"created_at\":\"2017-10-10 21:02:29\",\"updated_at\":\"2017-11-10 00:38:10\",\"deleted_at\":null,\"pivot\":{\"purchase_id\":98,\"product_id\":2,\"count\":1}},{\"id\":4,\"epc\":\"e2 00 51 80 00 0e 01 27 16 80 6a 49\",\"name\":\"Short Nike\",\"price\":\"520.00\",\"calories\":100,\"category_id\":4,\"created_at\":\"2017-10-10 21:02:29\",\"updated_at\":\"2017-10-29 21:04:47\",\"deleted_at\":null,\"pivot\":{\"purchase_id\":98,\"product_id\":4,\"count\":1}},{\"id\":5,\"epc\":\"e2 00 00 16 01 02 02 31 09 50 b9 75\",\"name\":\"Matarazzo Coditos\",\"price\":\"27.50\",\"calories\":100,\"category_id\":5,\"created_at\":\"2017-10-10 21:02:29\",\"updated_at\":\"2017-11-10 00:38:10\",\"deleted_at\":null,\"pivot\":{\"purchase_id\":98,\"product_id\":5,\"count\":1}},{\"id\":14,\"epc\":\"e2 00 00 16 01 02 02 12 09 50 b9 40\",\"name\":\"Rollo de Cocina x3\",\"price\":\"25.75\",\"calories\":100,\"category_id\":4,\"created_at\":\"2017-10-29 21:00:50\",\"updated_at\":\"2017-10-29 21:04:47\",\"deleted_at\":null,\"pivot\":{\"purchase_id\":98,\"product_id\":14,\"count\":1}},{\"id\":16,\"epc\":\"e2 00 00 16 01 02 02 15 09 50 b9 55\",\"name\":\"Pur\\u00e9 Chef\",\"price\":\"24.00\",\"calories\":100,\"category_id\":1,\"created_at\":\"2017-10-29 21:00:50\",\"updated_at\":\"2017-10-29 21:04:47\",\"deleted_at\":null,\"pivot\":{\"purchase_id\":98,\"product_id\":16,\"count\":1}},{\"id\":17,\"epc\":\"e2 00 00 16 01 02 02 26 09 50 b9 5f\",\"name\":\"Tablet Samsung Note\",\"price\":\"1299.99\",\"calories\":100,\"category_id\":2,\"created_at\":\"2017-10-29 21:00:50\",\"updated_at\":\"2017-10-29 21:04:47\",\"deleted_at\":null,\"pivot\":{\"purchase_id\":98,\"product_id\":17,\"count\":1}}]},{\"id\":99,\"group_id\":4,\"created_at\":\"2017-11-11 21:22:14\",\"updated_at\":\"2017-11-11 21:29:00\",\"status_id\":2,\"amounts\":\"45.74\",\"products\":[{\"id\":14,\"epc\":\"e2 00 00 16 01 02 02 12 09 50 b9 40\",\"name\":\"Rollo de Cocina x3\",\"price\":\"25.75\",\"calories\":100,\"category_id\":4,\"created_at\":\"2017-10-29 21:00:50\",\"updated_at\":\"2017-10-29 21:04:47\",\"deleted_at\":null,\"pivot\":{\"purchase_id\":99,\"product_id\":14,\"count\":1}},{\"id\":15,\"epc\":\"e2 00 00 16 01 02 02 32 09 50 b9 6e\",\"name\":\"Lata de at\\u00fan\",\"price\":\"19.99\",\"calories\":100,\"category_id\":5,\"created_at\":\"2017-10-29 21:00:50\",\"updated_at\":\"2017-10-29 21:04:47\",\"deleted_at\":null,\"pivot\":{\"purchase_id\":99,\"product_id\":15,\"count\":1}}]}]"
+				}
+			]
 		}
 	]
 }
