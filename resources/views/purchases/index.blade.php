@@ -39,7 +39,7 @@
                             <td></td>
                             <td></td>
                             <td style="text-align: right; font-weight: bold; color: white;">Total:</td>
-                            <td style="font-weight: bold; color: white;" id="montoTotal">{{'$'.$montoTotal}}</td>
+                            <td style="font-weight: bold; color: white;" id="montoTotal">{{'$'. number_format($montoTotal, 2)}}</td>
                             <td></td>
                         </tr>
                     @endif
