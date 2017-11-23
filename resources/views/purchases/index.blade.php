@@ -52,9 +52,32 @@
                 <button class="btn btn-info" onclick="confirmarCompra(event);">Confirmar compra</button>
             {!! Form::close() !!}
         @else
-           <p>Esperando una compra...</p>
+            <div class="jumbotron text-center">
+                <h1 class="display-3"><p>Esperando una compra</h1>
+                <hr class="my-4">
+                <div id="fountainG" style="margin-left: 400px">
+                    <div id="fountainG_1" class="fountainG"></div>
+                    <div id="fountainG_2" class="fountainG"></div>
+                    <div id="fountainG_3" class="fountainG"></div>
+                    <div id="fountainG_4" class="fountainG"></div>
+                    <div id="fountainG_5" class="fountainG"></div>
+                    <div id="fountainG_6" class="fountainG"></div>
+                    <div id="fountainG_7" class="fountainG"></div>
+                    <div id="fountainG_8" class="fountainG"></div>
+                </div>
+            </div>
         @endif
     </div>
+
+    <script>
+        var dots = window.setInterval( function() {
+            var wait = document.getElementById("wait");
+            if ( wait.innerHTML.length > 3 )
+                wait.innerHTML = "";
+            else
+                wait.innerHTML += ".";
+        }, 300);
+    </script>
 
     <script>
         $(document).ready( function() {
