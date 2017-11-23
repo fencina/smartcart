@@ -180,6 +180,7 @@ return [
         SimpleSoftwareIO\QrCode\QrCodeServiceProvider::class,
         \Laravel\Passport\PassportServiceProvider::class,
         \Laravel\Socialite\SocialiteServiceProvider::class,
+        \LaravelFCM\FCMServiceProvider::class,
 
 
     ],
@@ -234,6 +235,8 @@ return [
         'Html' => \Collective\Html\HtmlFacade::class,
         'QrCode' => SimpleSoftwareIO\QrCode\Facades\QrCode::class,
         'Socialite' => \Laravel\Socialite\Facades\Socialite::class,
+        'FCM' => \LaravelFCM\Facades\FCM::class,
+        'FCMGroup' => \LaravelFCM\Facades\FCMGroup::class,
 
     ],
 
