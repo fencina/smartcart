@@ -4,21 +4,21 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\NotificationFormRequest;
 use App\Notification;
-use App\Services\IonicPushNotificationService;
+use App\Services\FCMPushNotificationService;
 use App\Client;
 
 class NotificationController extends Controller
 {
     /**
-     * @var IonicPushNotificationService;
+     * @var FCMPushNotificationService;
      */
     var $pushNotificationService;
 
     /**
      * NotificationController constructor.
-     * @param IonicPushNotificationService $pushNotificationService
+     * @param FCMPushNotificationService $pushNotificationService
      */
-    public function __construct(IonicPushNotificationService $pushNotificationService)
+    public function __construct(FCMPushNotificationService $pushNotificationService)
     {
         $this->pushNotificationService = $pushNotificationService;
     }

@@ -7,7 +7,7 @@ use App\Group;
 use App\Http\Requests\PurchaseFormRequest;
 use App\Product;
 use App\Purchase;
-use App\Services\IonicPushNotificationService;
+use App\Services\FCMPushNotificationService;
 use App\Status;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Http\Request;
@@ -17,11 +17,11 @@ use Illuminate\Support\Facades\Auth;
 class PurchasesController extends Controller
 {
     /**
-     * @var IonicPushNotificationService;
+     * @var FCMPushNotificationService;
      */
     var $pushNotificationService;
 
-    public function __construct(IonicPushNotificationService $pushNotificationService)
+    public function __construct(FCMPushNotificationService $pushNotificationService)
     {
         $this->pushNotificationService = $pushNotificationService;
     }
