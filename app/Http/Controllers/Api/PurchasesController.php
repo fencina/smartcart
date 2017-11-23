@@ -28,7 +28,9 @@ class PurchasesController extends Controller
 
     public function index(Group $group)
     {
-        return response()->json($group->purchases->load('products'));
+        return response()->json($group->purchases->sortByDesc('created_at')->map(function ($purchase) {
+            return $purchase->load('products');
+        })->flatten());
     }
 
     /**

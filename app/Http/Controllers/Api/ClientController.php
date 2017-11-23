@@ -34,8 +34,8 @@ class ClientController extends Controller
      */
     public function purchases()
     {
-        return Auth::user()->groups->map(function ($group) {
-            return $group->purchases->load('products');
+        return Auth::user()->groups->map->purchases->flatten()->sortByDesc('created_at')->map(function ($purchase) {
+            return $purchase->load('products');
         })->flatten();
     }
 }
